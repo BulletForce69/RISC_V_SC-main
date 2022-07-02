@@ -15,24 +15,24 @@ reg Branch_Flag;
 always@(Func_3 or ALU_Result or Opcode or Branch_i) 
 begin
 	if(Branch_i == 1'b1)
-		if(Opcode == 7'b1101111 || Opcode == 7'b1100111)
+		if(Opcode == 7'b1101111 || Opcode == 7'b1100111) //Si es un Jal salta por fuerza
 			Branch_Flag = 1'b1;
 		else
 			case(Func_3)//                          
 
-				3'h0:	if(ALU_Result == 31'h0)
+				3'h0:	if(ALU_Result == 31'h0)	//BEQ
 							Branch_Flag = 1'b1;
 						else
 							Branch_Flag = 1'b0;
-				3'h1:	if(ALU_Result != 31'h0)
+				3'h1:	if(ALU_Result != 31'h0)	//BNQ
 							Branch_Flag = 1'b1;
 						else
 							Branch_Flag = 1'b0;
-				3'h4:	if(ALU_Result < 31'h0)
+				3'h4:	if(ALU_Result < 31'h0)	//BLT
 							Branch_Flag = 1'b1;
 						else
 							Branch_Flag = 1'b0;
-				3'h5:	if(ALU_Result >= 31'h0)
+				3'h5:	if(ALU_Result >= 31'h0)	//BGE
 							Branch_Flag = 1'b1;
 						else
 							Branch_Flag = 1'b0;

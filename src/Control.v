@@ -24,7 +24,7 @@ module Control
 	output Reg_Write_o,
 	output [2:0]ALU_Op_o
 );
-
+//tipos de instrucciones y sus OP Codes
 localparam R_Type 			= 7'h33;
 localparam I_Type_LOGIC 	= 7'h13;
 localparam I_Type_LOAD 		= 7'H3;
@@ -35,7 +35,7 @@ localparam J_Type_JAL		= 7'b1101111;
 localparam J_Type_JALR		= 7'b1100111;
 
 reg [8:0] control_values;
-
+// definimos los valores de control segun el tipo y lo que hace
 always@(OP_i) begin
 	case(OP_i)//                          876_54_3_210
 

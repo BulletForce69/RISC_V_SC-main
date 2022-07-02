@@ -20,7 +20,7 @@
 module RISC_V_Single_Cycle
 #(
 	parameter PROGRAM_MEMORY_DEPTH = 64,
-	parameter DATA_MEMORY_DEPTH = 128
+	parameter DATA_MEMORY_DEPTH = 256
 )
 
 (
@@ -37,7 +37,7 @@ module RISC_V_Single_Cycle
 //******************************************************************/
 /* Signals to connect modules*/
 
-assign RegTest_o = read_data_1_w;
+
 
 /**Control**/
 wire alu_src_w;
@@ -78,9 +78,11 @@ wire [3:0] alu_operation_w;
 
 /**Instruction Bus**/	
 wire [31:0] instruction_bus_w;
-/**Branch/JAL**/
+/**Branch/JAL**/ //wires para controlar los saltos
 wire Branch_Flag_w;
 wire Jal_Out_w;
+
+assign RegTest_o = read_data_1_w;
 
 
 //******************************************************************/
@@ -133,7 +135,10 @@ PC_PLUS_4
 	
 	.Result(pc_plus_4_w)
 );
-
+/*
+Multiplexor para decidir si el salto va a ser rs1 +imm o solo el imm, el selector es el cuarto bit del la instruccion
+porque es el que cambia entre jal y jalr.
+*/
 Multiplexer_2_to_1
 #(
 	.NBits(32)
@@ -148,6 +153,9 @@ MUX_JALR_OR_IMM
 
 );
 
+/*
+ sumador para agregar al PC lo necesario para hacer el salto segun sea el caso
+*/
 
 Adder_32_Bits
 JUMP_ADDER
@@ -157,6 +165,10 @@ JUMP_ADDER
 	
 	.Result(pc_plus_jmp_w)
 );
+
+/*
+Multiplexor para decirdir si el siguiente PC es +4 o viene de un salto
+*/
 
 Multiplexer_2_to_1
 #(
@@ -171,6 +183,11 @@ MUX_PC4_OR_JMP
 	.Mux_Output_o(Next_PC_w)
 
 );
+
+/*
+unidad de control de branches que usa el func3 para distinguir el tipo de branch, basicamente es un multiplexor grande que decide si se puede o no
+hacer el salto dependiendo del tipo y del resultado de la ALU
+*/
 
 Branch_Control
 Branch_Control_Unit
@@ -198,6 +215,10 @@ Data_Memory_Unit
 
 	.Read_Data_o(Read_Mem_Data_w)
 );
+
+/*
+Mux para decidir si al registro se debe escribir el resultado de la ALU o lo que sale de memoria.
+*/
 
 Multiplexer_2_to_1
 #(

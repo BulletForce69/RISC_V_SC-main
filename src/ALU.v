@@ -24,6 +24,10 @@ module ALU
 	output reg [31:0] ALU_Result_o
 );
 
+/*
+Para ejecutar las instrucciones
+*/
+
 localparam ADD 	= 4'b0000;
 localparam SUB 	= 4'b0001;
 localparam XOR  	= 4'b0010;
@@ -36,7 +40,8 @@ localparam JAL		= 4'b1000;
 localparam STR 	= 4'b1001;
 localparam LUI 	= 4'b1111;
 
-   
+  
+//operaciones  
    always @ (A_i or B_i or ALU_Operation_i or Pc4)
      begin
 		case (ALU_Operation_i)
