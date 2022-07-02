@@ -139,15 +139,20 @@ PC_PLUS_4
 Multiplexor para decidir si el salto va a ser rs1 +imm o solo el imm, el selector es el cuarto bit del la instruccion
 porque es el que cambia entre jal y jalr.
 */
+
+wire JALR_f;
+assign JALR_f = (instruction_bus_w[6:0] == 7'b1100111)? 1'b1:1'b0;
+
+
 Multiplexer_2_to_1
 #(
 	.NBits(32)
 )
 MUX_JALR_OR_IMM
 (
-	.Selector_i(instruction_bus_w[3]),
-	.Mux_Data_0_i(alu_result_w),
-	.Mux_Data_1_i(inmmediate_data_w),
+	.Selector_i(JALR_f),
+	.Mux_Data_0_i(inmmediate_data_w),
+	.Mux_Data_1_i(alu_result_w),
 	
 	.Mux_Output_o(Jal_Out_w)
 
