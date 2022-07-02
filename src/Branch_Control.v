@@ -28,11 +28,11 @@ begin
 							Branch_Flag = 1'b1;
 						else
 							Branch_Flag = 1'b0;
-				3'h4:	if(ALU_Result < 31'h0)	//BLT
+				3'h4:	if(ALU_Result[31] == 1'b1)	//BLT
 							Branch_Flag = 1'b1;
 						else
 							Branch_Flag = 1'b0;
-				3'h5:	if(ALU_Result >= 31'h0)	//BGE
+				3'h5:	if(ALU_Result[31] == 1'b0)	//BGE
 							Branch_Flag = 1'b1;
 						else
 							Branch_Flag = 1'b0;

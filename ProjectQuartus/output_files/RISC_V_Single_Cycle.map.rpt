@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RISC_V_Single_Cycle
-Fri Jul  1 22:35:38 2022
+Fri Jul  1 23:30:39 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -96,7 +96,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jul  1 22:35:38 2022       ;
+; Analysis & Synthesis Status        ; Successful - Fri Jul  1 23:30:39 2022       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; RISC_V_Single_Cycle                         ;
 ; Top-level Entity Name              ; RISC_V_Single_Cycle                         ;
@@ -1856,7 +1856,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Fri Jul  1 22:35:27 2022
+    Info: Processing started: Fri Jul  1 23:30:29 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RISC_V_Single_Cycle -c RISC_V_Single_Cycle
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -1911,8 +1911,8 @@ Info (12128): Elaborating entity "MUXRegisterFile" for hierarchy "Register_File:
 Info (12128): Elaborating entity "Immediate_Unit" for hierarchy "Immediate_Unit:IMM_UNIT" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 260
 Info (12128): Elaborating entity "ALU_Control" for hierarchy "ALU_Control:ALU_CONTROL_UNIT" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 287
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU_UNIT" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 300
-Warning (10764): Verilog HDL warning at ALU.v(48): converting signed shift amount to unsigned File: E:/RISCV_SC/RISC_V_SC-main/src/ALU.v Line: 48
-Warning (10764): Verilog HDL warning at ALU.v(49): converting signed shift amount to unsigned File: E:/RISCV_SC/RISC_V_SC-main/src/ALU.v Line: 49
+Warning (10764): Verilog HDL warning at ALU.v(53): converting signed shift amount to unsigned File: E:/RISCV_SC/RISC_V_SC-main/src/ALU.v Line: 53
+Warning (10764): Verilog HDL warning at ALU.v(54): converting signed shift amount to unsigned File: E:/RISCV_SC/RISC_V_SC-main/src/ALU.v Line: 54
 Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "E:/RISCV_SC/RISC_V_SC-main/ProjectQuartus/db/RISC_V_Single_Cycle.ram0_Program_Memory_49bd8618.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Info (276014): Found 2 instances of uninferred RAM logic
     Info (276007): RAM logic "Data_Memory:Data_Memory_Unit|ram" is uninferred due to asynchronous read logic File: E:/RISCV_SC/RISC_V_SC-main/src/Data_Memory.v Line: 33
@@ -1963,8 +1963,8 @@ Info (21057): Implemented 34 device resources after synthesis - the final resour
     Info (21059): Implemented 32 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 46 warnings
     Info: Peak virtual memory: 4765 megabytes
-    Info: Processing ended: Fri Jul  1 22:35:38 2022
-    Info: Elapsed time: 00:00:11
+    Info: Processing ended: Fri Jul  1 23:30:39 2022
+    Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:26
 
 
