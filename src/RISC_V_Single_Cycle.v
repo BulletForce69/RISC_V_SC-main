@@ -81,6 +81,26 @@ wire [31:0] instruction_bus_w;
 /**Branch/JAL**/ //wires para controlar los saltos
 wire Branch_Flag_w;
 wire Jal_Out_w;
+wire [31:0] JALR_Res_w;
+
+/** Pipeline Wires **/
+
+wire [31:0] Pipe_PC_w;
+wire [31:0] Pipe_Instr_w;
+
+wire [31:0] Pipe2_PC_w;
+wire [31:0] Pipe_Rd1_w;
+wire [31:0] Pipe_Rd2_w;
+wire [31:0] Pipe_Imm_w;
+
+wire [31:0] Pipe_PCJMP_w;
+wire [31:0] Pipe_ALURes_w;
+wire [31:0] Pipe3_Rd2_w;
+
+wire [31:0] Pipe_RdData_w;
+wire [31:0] Pipe4_ALURes_w;
+
+
 
 assign RegTest_o = read_data_1_w;
 
@@ -94,7 +114,7 @@ Control
 CONTROL_UNIT
 (
 	/****/
-	.OP_i(instruction_bus_w[6:0]),
+	.OP_i(Pipe_Instr_w[6:0]),
 	/** outputus**/
 	.Branch_o(Branch_w),
 	.ALU_Op_o(alu_op_w),
@@ -123,6 +143,7 @@ Program_Memory
 PROGRAM_MEMORY
 (
 	.Address_i(pc_w),
+	
 	.Instruction_o(instruction_bus_w)
 );
 
@@ -141,9 +162,33 @@ porque es el que cambia entre jal y jalr.
 */
 
 wire JALR_f;
-assign JALR_f = (instruction_bus_w[6:0] == 7'b1100111)? 1'b1:1'b0;
+assign JALR_f = (Pipe_Instr_w[6:0] == 7'b1100111)? 1'b1:1'b0;
 
 
+
+
+/*
+ Sumador para agregar al PC lo necesario para hacer el salto segun sea el caso
+*/
+Adder_32_Bits
+JUMP_ADDER
+(
+	.Data0(Pipe2_PC_w),
+	.Data1(Pipe_Imm_w),
+	
+	.Result(pc_plus_jmp_w)
+);
+// Sumador para obtener el salto de JALR
+Adder_32_Bits
+JALR_ADDER
+(
+	.Data0(Pipe_Rd1_w),
+	.Data1(Pipe_Imm_w),
+	
+	.Result(JALR_Res_w)
+);
+
+// Mux para ver si el salto es Pc + Imm o viene de un JALR Rs1 +Imm
 Multiplexer_2_to_1
 #(
 	.NBits(32)
@@ -151,28 +196,16 @@ Multiplexer_2_to_1
 MUX_JALR_OR_IMM
 (
 	.Selector_i(JALR_f),
-	.Mux_Data_0_i(inmmediate_data_w),
-	.Mux_Data_1_i(alu_result_w),
+	.Mux_Data_0_i(pc_plus_jmp_w),
+	.Mux_Data_1_i(JALR_Res_w),
 	
-	.Mux_Output_o(Jal_Out_w)
+	.Mux_Output_o(Jmp_Out_w)
 
 );
 
-/*
- sumador para agregar al PC lo necesario para hacer el salto segun sea el caso
-*/
-
-Adder_32_Bits
-JUMP_ADDER
-(
-	.Data0(pc_w),
-	.Data1(Jal_Out_w),
-	
-	.Result(pc_plus_jmp_w)
-);
 
 /*
-Multiplexor para decirdir si el siguiente PC es +4 o viene de un salto
+Multiplexor para decirdir si el siguiente PC es + 4 o viene de un salto
 */
 
 Multiplexer_2_to_1
@@ -183,9 +216,9 @@ MUX_PC4_OR_JMP
 (
 	.Selector_i(Branch_Flag_w),
 	.Mux_Data_0_i(pc_plus_4_w),
-	.Mux_Data_1_i(pc_plus_jmp_w),
+	.Mux_Data_1_i(Jmp_Out_w),
 	
-	.Mux_Output_o(Next_PC_w)
+	.Mux_Output_o(Pipe_PCJMP_w)
 
 );
 
@@ -197,9 +230,9 @@ hacer el salto dependiendo del tipo y del resultado de la ALU
 Branch_Control
 Branch_Control_Unit
 (
-	.Func_3(instruction_bus_w[14:12]),
+	.Func_3(Pipe_Instr_w[14:12]),
 	.Branch_i(Branch_w),
-	.ALU_Result(alu_result_w),
+	.ALU_Result(Pipe_ALURes_w),
 	
 	.Branch_Flag_o(Branch_Flag_w)
 	
@@ -215,8 +248,8 @@ Data_Memory_Unit
 	.clk(clk),
 	.Mem_Write_i(mem_write_w),
 	.Mem_Read_i(mem_read_w),
-	.Write_Data_i(read_data_2_w),
-	.Address_i(alu_result_w),
+	.Write_Data_i(Pipe3_Rd2_w),
+	.Address_i(Pipe_ALURes_w),
 
 	.Read_Data_o(Read_Mem_Data_w)
 );
@@ -232,8 +265,8 @@ Multiplexer_2_to_1
 MUX_ALU_OR_MEM_OUT
 (
 	.Selector_i(mem_to_reg_w),
-	.Mux_Data_0_i(alu_result_w),
-	.Mux_Data_1_i(Read_Mem_Data_w),
+	.Mux_Data_0_i(Pipe4_ALURes_w),
+	.Mux_Data_1_i(Pipe_RdData_w),
 	
 	.Mux_Output_o(ALU_OR_MEM_w)
 
@@ -246,10 +279,11 @@ REGISTER_FILE_UNIT
 	.clk(clk),
 	.reset(reset),
 	.Reg_Write_i(reg_write_w),
-	.Write_Register_i(instruction_bus_w[11:7]),
-	.Read_Register_1_i(instruction_bus_w[19:15]),
-	.Read_Register_2_i(instruction_bus_w[24:20]),
+	.Write_Register_i(Pipe_Instr_w[11:7]),
+	.Read_Register_1_i(Pipe_Instr_w[19:15]),
+	.Read_Register_2_i(Pipe_Instr_w[24:20]),
 	.Write_Data_i(ALU_OR_MEM_w),
+	
 	.Read_Data_1_o(read_data_1_w),
 	.Read_Data_2_o(read_data_2_w)
 
@@ -259,8 +293,9 @@ REGISTER_FILE_UNIT
 
 Immediate_Unit
 IMM_UNIT
-(  .op_i(instruction_bus_w[6:0]),
-   .Instruction_bus_i(instruction_bus_w),
+(  .op_i(Pipe_Instr_w[6:0]),
+   .Instruction_bus_i(Pipe_Instr_w),
+	
    .Immediate_o(inmmediate_data_w)
 );
 
@@ -273,8 +308,8 @@ Multiplexer_2_to_1
 MUX_DATA_OR_IMM_FOR_ALU
 (
 	.Selector_i(alu_src_w),
-	.Mux_Data_0_i(read_data_2_w),
-	.Mux_Data_1_i(inmmediate_data_w),
+	.Mux_Data_0_i(Pipe_Rd2_w),
+	.Mux_Data_1_i(Pipe_Imm_w),
 	
 	.Mux_Output_o(read_data_2_or_imm_w)
 
@@ -284,9 +319,9 @@ MUX_DATA_OR_IMM_FOR_ALU
 ALU_Control
 ALU_CONTROL_UNIT
 (
-	.funct7_i(instruction_bus_w[30]),
+	.funct7_i(Pipe_Instr_w[30]),
 	.ALU_Op_i(alu_op_w),
-	.funct3_i(instruction_bus_w[14:12]),
+	.funct3_i(Pipe_Instr_w[14:12]),
 	.ALU_Operation_o(alu_operation_w)
 
 );
@@ -297,7 +332,7 @@ ALU
 ALU_UNIT
 (
 	.ALU_Operation_i(alu_operation_w),
-	.A_i(read_data_1_w),
+	.A_i(Pipe_Rd1_w),
 	.B_i(read_data_2_or_imm_w),
 	.Pc4(pc_plus_4_w),
 	.Zero_o(Zero_Flag_w),
@@ -305,6 +340,152 @@ ALU_UNIT
 );
 
 
+/*
+	IF/ID Pipeline ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+Register_Pipeline
+IF_ID_PC
+(
+	.clk(clk),
+	.reset(reset),
+	.enable(1'b1),
+	.DataInput(pc_w),
+	
+	
+	.DataOutput(Pipe_PC_w)
+);
+Register_Pipeline
+IF_ID_Instr
+(
+	.clk(clk),
+	.reset(reset),
+	.enable(1'b1),
+	.DataInput(instruction_bus_w),
+	
+	
+	.DataOutput(Pipe_Instr_w)
+);
+
+
+/*
+	ID/EX Pipeline ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+Register_Pipeline
+ID_EX_PC
+(
+	.clk(clk),
+	.reset(reset),
+	.enable(1'b1),
+	.DataInput(Pipe_PC_w),
+	
+	
+	.DataOutput(Pipe2_PC_w)
+);
+
+Register_Pipeline
+ID_EX_RD1
+(
+	.clk(clk),
+	.reset(reset),
+	.enable(1'b1),
+	.DataInput(read_data_1_w),
+	
+	
+	.DataOutput(Pipe_Rd1_w)
+);
+
+Register_Pipeline
+ID_EX_RD2
+(
+	.clk(clk),
+	.reset(reset),
+	.enable(1'b1),
+	.DataInput(read_data_2_w),
+	
+	
+	.DataOutput(Pipe_Rd2_w)
+);
+
+Register_Pipeline
+ID_EX_IMM
+(
+	.clk(clk),
+	.reset(reset),
+	.enable(1'b1),
+	.DataInput(inmmediate_data_w),
+	
+	
+	.DataOutput(Pipe_Imm_w)
+);
+
+/*
+	Ex/MEM Pipeline ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+Register_Pipeline
+EX_MEM_PC
+(
+	.clk(clk),
+	.reset(reset),
+	.enable(1'b1),
+	.DataInput(Jmp_Out_w),
+	
+	
+	.DataOutput(Pipe_PCJMP_w)
+);
+
+Register_Pipeline
+EX_MEM_ALU_RES
+(
+	.clk(clk),
+	.reset(reset),
+	.enable(1'b1),
+	.DataInput(alu_result_w),
+	
+	
+	.DataOutput(Pipe_ALURes_w)
+);
+
+Register_Pipeline
+EX_MEM_RD2
+(
+	.clk(clk),
+	.reset(reset),
+	.enable(1'b1),
+	.DataInput(Pipe_Rd2_w),
+	
+	
+	.DataOutput(Pipe3_Rd2_w)
+);
+
+/*
+	MEM/WB Pipeline ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+Register_Pipeline
+MEM_WB_RDATA
+(
+	.clk(clk),
+	.reset(reset),
+	.enable(1'b1),
+	.DataInput(Read_Mem_Data_w),
+	
+	
+	.DataOutput(Pipe_RdData_w)
+);
+
+Register_Pipeline
+MEM_WB_ALU_RES
+(
+	.clk(clk),
+	.reset(reset),
+	.enable(1'b1),
+	.DataInput(Pipe_ALURes_w),
+	
+	
+	.DataOutput(Pipe4_ALURes_w)
+);
 
 
 endmodule
