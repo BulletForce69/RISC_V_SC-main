@@ -22,6 +22,7 @@ module Control
 	output Mem_Write_o,
 	output ALU_Src_o,
 	output Reg_Write_o,
+	output JALR_F_o,
 	output [2:0]ALU_Op_o
 );
 //tipos de instrucciones y sus OP Codes
@@ -33,6 +34,7 @@ localparam U_Type_LOAD		= 7'b0110111;
 localparam B_Type_BRANCH	= 7'b1100011;
 localparam J_Type_JAL		= 7'b1101111;
 localparam J_Type_JALR		= 7'b1100111;
+assign JALR_F_o = (OP_i == 7'b1100111)? 1'b1:1'b0; // señal para saber si es un JALR y cambiar la asignacion del pc en el TOP
 
 reg [8:0] control_values;
 // definimos los valores de control segun el tipo y lo que hace

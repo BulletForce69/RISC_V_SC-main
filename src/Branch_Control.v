@@ -20,22 +20,13 @@ begin
 		else
 			case(Func_3)//                          
 
-				3'h0:	if(ALU_Result == 31'h0)	//BEQ
-							Branch_Flag = 1'b1;
-						else
-							Branch_Flag = 1'b0;
-				3'h1:	if(ALU_Result != 31'h0)	//BNQ
-							Branch_Flag = 1'b1;
-						else
-							Branch_Flag = 1'b0;
-				3'h4:	if(ALU_Result[31] == 1'b1)	//BLT
-							Branch_Flag = 1'b1;
-						else
-							Branch_Flag = 1'b0;
-				3'h5:	if(ALU_Result[31] == 1'b0)	//BGE
-							Branch_Flag = 1'b1;
-						else
-							Branch_Flag = 1'b0;
+				3'h0:		Branch_Flag = ~(|ALU_Result);//BEQ
+							
+				3'h1:		Branch_Flag = (|ALU_Result);//BNQ
+						
+				3'h4:		Branch_Flag = ALU_Result[31];//BLT
+				
+				3'h5:		Branch_Flag = ~ALU_Result[31];//BGE
 			
 				
 				default:

@@ -74,7 +74,7 @@ Register_ra
 	
 
 	
-SP_Register
+Register
 Register_sp
 (
 	.clk(clk),
