@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RISC_V_Single_Cycle
-Fri Jul  8 22:52:10 2022
+Fri Jul  8 23:50:43 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -15,117 +15,117 @@ Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Inverted Register Statistics
- 12. Registers Packed Into Inferred Megafunctions
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Source assignments for Program_Memory:PROGRAM_MEMORY|altsyncram:rom_rtl_0|altsyncram_4781:auto_generated
- 15. Parameter Settings for User Entity Instance: Top-level Entity: |RISC_V_Single_Cycle
- 16. Parameter Settings for User Entity Instance: PC_Register:PC
- 17. Parameter Settings for User Entity Instance: Program_Memory:PROGRAM_MEMORY
- 18. Parameter Settings for User Entity Instance: Adder_32_Bits:PC_PLUS_4
- 19. Parameter Settings for User Entity Instance: Adder_32_Bits:JUMP_ADDER
- 20. Parameter Settings for User Entity Instance: Adder_32_Bits:JALR_ADDER
- 21. Parameter Settings for User Entity Instance: Multiplexer_2_to_1:MUX_JALR_OR_IMM
- 22. Parameter Settings for User Entity Instance: Multiplexer_2_to_1:MUX_PC4_OR_JMP
- 23. Parameter Settings for User Entity Instance: Data_Memory:Data_Memory_Unit
- 24. Parameter Settings for User Entity Instance: Multiplexer_2_to_1:MUX_ALU_OR_MEM_OUT
- 25. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT
- 26. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_zero
- 27. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_ra
- 28. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|SP_Register:Register_sp
- 29. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_gp
- 30. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_tp
- 31. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_t0
- 32. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_t1
- 33. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_t2
- 34. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_s0_fp
- 35. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_s1
- 36. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_a0
- 37. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_a1
- 38. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_a2
- 39. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_a3
- 40. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_a4
- 41. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_a5
- 42. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_a6
- 43. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_a7
- 44. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_s2
- 45. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_s3
- 46. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_s4
- 47. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_s5
- 48. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_s6
- 49. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_s7
- 50. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_s8
- 51. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_s9
- 52. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_s10
- 53. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_s11
- 54. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_t3
- 55. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_t4
- 56. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_t5
- 57. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_t6
- 58. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|MUXRegisterFile:MUXRegister1
- 59. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|MUXRegisterFile:MUXRegister2
- 60. Parameter Settings for User Entity Instance: Multiplexer_2_to_1:MUX_DATA_OR_IMM_FOR_ALU
- 61. Parameter Settings for User Entity Instance: Register_Pipeline:IF_ID_PC
- 62. Parameter Settings for User Entity Instance: Register_Pipeline:IF_ID_Instr
- 63. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_PC
- 64. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_RD1
- 65. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_RD2
- 66. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_IMM
- 67. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_ALUOP
- 68. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_ALUSRC
- 69. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_MEMWR
- 70. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_MEMRD
- 71. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_BRANCH
- 72. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_JALR
- 73. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_REGW
- 74. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_MEWMREG
- 75. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_PC
- 76. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_ALU_RES
- 77. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_RD2
- 78. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_MEMWR
- 79. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_MEMRD
- 80. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_BRANCH
- 81. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_JALR
- 82. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_REGW
- 83. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_MEMREG
- 84. Parameter Settings for User Entity Instance: Register_Pipeline:MEM_WB_RDATA
- 85. Parameter Settings for User Entity Instance: Register_Pipeline:MEM_WB_ALU_RES
- 86. Parameter Settings for User Entity Instance: Register_Pipeline:MEM_WB_REGW
- 87. Parameter Settings for User Entity Instance: Register_Pipeline:MEM_WB_MEMREG
- 88. Parameter Settings for Inferred Entity Instance: Program_Memory:PROGRAM_MEMORY|altsyncram:rom_rtl_0
- 89. altsyncram Parameter Settings by Entity Instance
- 90. Port Connectivity Checks: "Register_Pipeline:MEM_WB_MEMREG"
- 91. Port Connectivity Checks: "Register_Pipeline:MEM_WB_REGW"
- 92. Port Connectivity Checks: "Register_Pipeline:MEM_WB_ALU_RES"
- 93. Port Connectivity Checks: "Register_Pipeline:MEM_WB_RDATA"
- 94. Port Connectivity Checks: "Register_Pipeline:EX_MEM_MEMREG"
- 95. Port Connectivity Checks: "Register_Pipeline:EX_MEM_REGW"
- 96. Port Connectivity Checks: "Register_Pipeline:EX_MEM_JALR"
- 97. Port Connectivity Checks: "Register_Pipeline:EX_MEM_BRANCH"
- 98. Port Connectivity Checks: "Register_Pipeline:EX_MEM_MEMRD"
- 99. Port Connectivity Checks: "Register_Pipeline:EX_MEM_MEMWR"
-100. Port Connectivity Checks: "Register_Pipeline:EX_MEM_RD2"
-101. Port Connectivity Checks: "Register_Pipeline:EX_MEM_ALU_RES"
-102. Port Connectivity Checks: "Register_Pipeline:EX_MEM_PC"
-103. Port Connectivity Checks: "Register_Pipeline:ID_EX_MEWMREG"
-104. Port Connectivity Checks: "Register_Pipeline:ID_EX_REGW"
-105. Port Connectivity Checks: "Register_Pipeline:ID_EX_JALR"
-106. Port Connectivity Checks: "Register_Pipeline:ID_EX_BRANCH"
-107. Port Connectivity Checks: "Register_Pipeline:ID_EX_MEMRD"
-108. Port Connectivity Checks: "Register_Pipeline:ID_EX_MEMWR"
-109. Port Connectivity Checks: "Register_Pipeline:ID_EX_ALUSRC"
-110. Port Connectivity Checks: "Register_Pipeline:ID_EX_ALUOP"
-111. Port Connectivity Checks: "Register_Pipeline:ID_EX_IMM"
-112. Port Connectivity Checks: "Register_Pipeline:ID_EX_RD2"
-113. Port Connectivity Checks: "Register_Pipeline:ID_EX_RD1"
-114. Port Connectivity Checks: "Register_Pipeline:ID_EX_PC"
-115. Port Connectivity Checks: "Register_Pipeline:IF_ID_Instr"
-116. Port Connectivity Checks: "Register_Pipeline:IF_ID_PC"
-117. Port Connectivity Checks: "ALU:ALU_UNIT"
-118. Port Connectivity Checks: "Register_File:REGISTER_FILE_UNIT|Register:Register_zero"
-119. Port Connectivity Checks: "Branch_Control:Branch_Control_Unit"
-120. Port Connectivity Checks: "Multiplexer_2_to_1:MUX_PC4_OR_JMP"
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Registers Packed Into Inferred Megafunctions
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for Program_Memory:PROGRAM_MEMORY|altsyncram:rom_rtl_0|altsyncram_4781:auto_generated
+ 16. Parameter Settings for User Entity Instance: Top-level Entity: |RISC_V_Single_Cycle
+ 17. Parameter Settings for User Entity Instance: PC_Register:PC
+ 18. Parameter Settings for User Entity Instance: Program_Memory:PROGRAM_MEMORY
+ 19. Parameter Settings for User Entity Instance: Adder_32_Bits:PC_PLUS_4
+ 20. Parameter Settings for User Entity Instance: Adder_32_Bits:JUMP_ADDER
+ 21. Parameter Settings for User Entity Instance: Adder_32_Bits:JALR_ADDER
+ 22. Parameter Settings for User Entity Instance: Multiplexer_2_to_1:MUX_JALR_OR_IMM
+ 23. Parameter Settings for User Entity Instance: Multiplexer_2_to_1:MUX_PC4_OR_JMP
+ 24. Parameter Settings for User Entity Instance: Data_Memory:Data_Memory_Unit
+ 25. Parameter Settings for User Entity Instance: Multiplexer_2_to_1:MUX_ALU_OR_MEM_OUT
+ 26. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT
+ 27. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_zero
+ 28. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_ra
+ 29. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|SP_Register:Register_sp
+ 30. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_gp
+ 31. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_tp
+ 32. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_t0
+ 33. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_t1
+ 34. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_t2
+ 35. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_s0_fp
+ 36. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_s1
+ 37. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_a0
+ 38. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_a1
+ 39. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_a2
+ 40. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_a3
+ 41. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_a4
+ 42. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_a5
+ 43. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_a6
+ 44. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_a7
+ 45. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_s2
+ 46. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_s3
+ 47. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_s4
+ 48. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_s5
+ 49. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_s6
+ 50. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_s7
+ 51. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_s8
+ 52. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_s9
+ 53. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_s10
+ 54. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_s11
+ 55. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_t3
+ 56. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_t4
+ 57. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_t5
+ 58. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|Register:Register_t6
+ 59. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|MUXRegisterFile:MUXRegister1
+ 60. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|MUXRegisterFile:MUXRegister2
+ 61. Parameter Settings for User Entity Instance: Multiplexer_2_to_1:MUX_DATA_OR_IMM_FOR_ALU
+ 62. Parameter Settings for User Entity Instance: Register_Pipeline:IF_ID_PC
+ 63. Parameter Settings for User Entity Instance: Register_Pipeline:IF_ID_Instr
+ 64. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_PC
+ 65. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_RD1
+ 66. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_RD2
+ 67. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_IMM
+ 68. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_ALUOP
+ 69. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_ALUSRC
+ 70. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_MEMWR
+ 71. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_MEMRD
+ 72. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_BRANCH
+ 73. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_JALR
+ 74. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_REGW
+ 75. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_MEWMREG
+ 76. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_PC
+ 77. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_ALU_RES
+ 78. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_RD2
+ 79. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_MEMWR
+ 80. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_MEMRD
+ 81. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_BRANCH
+ 82. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_JALR
+ 83. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_REGW
+ 84. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_MEMREG
+ 85. Parameter Settings for User Entity Instance: Register_Pipeline:MEM_WB_RDATA
+ 86. Parameter Settings for User Entity Instance: Register_Pipeline:MEM_WB_ALU_RES
+ 87. Parameter Settings for User Entity Instance: Register_Pipeline:MEM_WB_REGW
+ 88. Parameter Settings for User Entity Instance: Register_Pipeline:MEM_WB_MEMREG
+ 89. Parameter Settings for Inferred Entity Instance: Program_Memory:PROGRAM_MEMORY|altsyncram:rom_rtl_0
+ 90. altsyncram Parameter Settings by Entity Instance
+ 91. Port Connectivity Checks: "Register_Pipeline:MEM_WB_MEMREG"
+ 92. Port Connectivity Checks: "Register_Pipeline:MEM_WB_REGW"
+ 93. Port Connectivity Checks: "Register_Pipeline:MEM_WB_ALU_RES"
+ 94. Port Connectivity Checks: "Register_Pipeline:MEM_WB_RDATA"
+ 95. Port Connectivity Checks: "Register_Pipeline:EX_MEM_MEMREG"
+ 96. Port Connectivity Checks: "Register_Pipeline:EX_MEM_REGW"
+ 97. Port Connectivity Checks: "Register_Pipeline:EX_MEM_JALR"
+ 98. Port Connectivity Checks: "Register_Pipeline:EX_MEM_BRANCH"
+ 99. Port Connectivity Checks: "Register_Pipeline:EX_MEM_MEMRD"
+100. Port Connectivity Checks: "Register_Pipeline:EX_MEM_MEMWR"
+101. Port Connectivity Checks: "Register_Pipeline:EX_MEM_RD2"
+102. Port Connectivity Checks: "Register_Pipeline:EX_MEM_ALU_RES"
+103. Port Connectivity Checks: "Register_Pipeline:EX_MEM_PC"
+104. Port Connectivity Checks: "Register_Pipeline:ID_EX_MEWMREG"
+105. Port Connectivity Checks: "Register_Pipeline:ID_EX_REGW"
+106. Port Connectivity Checks: "Register_Pipeline:ID_EX_JALR"
+107. Port Connectivity Checks: "Register_Pipeline:ID_EX_BRANCH"
+108. Port Connectivity Checks: "Register_Pipeline:ID_EX_MEMRD"
+109. Port Connectivity Checks: "Register_Pipeline:ID_EX_MEMWR"
+110. Port Connectivity Checks: "Register_Pipeline:ID_EX_ALUSRC"
+111. Port Connectivity Checks: "Register_Pipeline:ID_EX_ALUOP"
+112. Port Connectivity Checks: "Register_Pipeline:ID_EX_IMM"
+113. Port Connectivity Checks: "Register_Pipeline:ID_EX_RD2"
+114. Port Connectivity Checks: "Register_Pipeline:ID_EX_RD1"
+115. Port Connectivity Checks: "Register_Pipeline:ID_EX_PC"
+116. Port Connectivity Checks: "Register_Pipeline:IF_ID_Instr"
+117. Port Connectivity Checks: "Register_Pipeline:IF_ID_PC"
+118. Port Connectivity Checks: "ALU:ALU_UNIT"
+119. Port Connectivity Checks: "Register_File:REGISTER_FILE_UNIT|Register:Register_zero"
+120. Port Connectivity Checks: "Branch_Control:Branch_Control_Unit"
 121. Port Connectivity Checks: "Multiplexer_2_to_1:MUX_JALR_OR_IMM"
 122. Port Connectivity Checks: "Adder_32_Bits:PC_PLUS_4"
 123. Post-Synthesis Netlist Statistics for Top Partition
@@ -157,18 +157,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jul  8 22:52:09 2022       ;
+; Analysis & Synthesis Status        ; Successful - Fri Jul  8 23:50:43 2022       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; RISC_V_Single_Cycle                         ;
 ; Top-level Entity Name              ; RISC_V_Single_Cycle                         ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 17,121                                      ;
-;     Total combinational functions  ; 7,899                                       ;
-;     Dedicated logic registers      ; 9,422                                       ;
-; Total registers                    ; 9422                                        ;
+; Total logic elements               ; 17,217                                      ;
+;     Total combinational functions  ; 7,992                                       ;
+;     Dedicated logic registers      ; 9,459                                       ;
+; Total registers                    ; 9459                                        ;
 ; Total pins                         ; 34                                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 64                                          ;
+; Total memory bits                  ; 2,048                                       ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 0                                           ;
 ; UFM blocks                         ; 0                                           ;
@@ -270,7 +270,7 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.04        ;
+; Average used               ; 1.03        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
@@ -278,9 +278,9 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 2            ;   0.3%      ;
 ;     Processor 3            ;   0.3%      ;
 ;     Processor 4            ;   0.3%      ;
-;     Processor 5            ;   0.3%      ;
-;     Processor 6            ;   0.3%      ;
-;     Processor 7            ;   0.3%      ;
+;     Processor 5            ;   0.2%      ;
+;     Processor 6            ;   0.2%      ;
+;     Processor 7            ;   0.2%      ;
 ;     Processor 8            ;   0.2%      ;
 ;     Processors 9-16        ;   0.2%      ;
 +----------------------------+-------------+
@@ -328,30 +328,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 17,121    ;
+; Estimated Total logic elements              ; 17,217    ;
 ;                                             ;           ;
-; Total combinational functions               ; 7899      ;
+; Total combinational functions               ; 7992      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 7227      ;
-;     -- 3 input functions                    ; 588       ;
-;     -- <=2 input functions                  ; 84        ;
+;     -- 4 input functions                    ; 7256      ;
+;     -- 3 input functions                    ; 584       ;
+;     -- <=2 input functions                  ; 152       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 7867      ;
-;     -- arithmetic mode                      ; 32        ;
+;     -- normal mode                          ; 7931      ;
+;     -- arithmetic mode                      ; 61        ;
 ;                                             ;           ;
-; Total registers                             ; 9422      ;
-;     -- Dedicated logic registers            ; 9422      ;
+; Total registers                             ; 9459      ;
+;     -- Dedicated logic registers            ; 9459      ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 34        ;
-; Total memory bits                           ; 64        ;
+; Total memory bits                           ; 2048      ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 9454      ;
-; Total fan-out                               ; 60308     ;
+; Maximum fan-out                             ; 9491      ;
+; Total fan-out                               ; 60792     ;
 ; Average fan-out                             ; 3.46      ;
 +---------------------------------------------+-----------+
 
@@ -361,18 +361,22 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                    ; Entity Name           ; Library Name ;
 +-------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; |RISC_V_Single_Cycle                            ; 7899 (1)            ; 9422 (0)                  ; 64          ; 0          ; 0            ; 0       ; 0         ; 34   ; 0            ; 0          ; |RISC_V_Single_Cycle                                                                                   ; RISC_V_Single_Cycle   ; work         ;
-;    |ALU:ALU_UNIT|                               ; 529 (529)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|ALU:ALU_UNIT                                                                      ; ALU                   ; work         ;
-;    |ALU_Control:ALU_CONTROL_UNIT|               ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|ALU_Control:ALU_CONTROL_UNIT                                                      ; ALU_Control           ; work         ;
-;    |Control:CONTROL_UNIT|                       ; 16 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Control:CONTROL_UNIT                                                              ; Control               ; work         ;
+; |RISC_V_Single_Cycle                            ; 7992 (0)            ; 9459 (0)                  ; 2048        ; 0          ; 0            ; 0       ; 0         ; 34   ; 0            ; 0          ; |RISC_V_Single_Cycle                                                                                   ; RISC_V_Single_Cycle   ; work         ;
+;    |ALU:ALU_UNIT|                               ; 568 (568)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|ALU:ALU_UNIT                                                                      ; ALU                   ; work         ;
+;    |ALU_Control:ALU_CONTROL_UNIT|               ; 12 (12)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|ALU_Control:ALU_CONTROL_UNIT                                                      ; ALU_Control           ; work         ;
+;    |Adder_32_Bits:PC_PLUS_4|                    ; 30 (30)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Adder_32_Bits:PC_PLUS_4                                                           ; Adder_32_Bits         ; work         ;
+;    |Branch_Control:Branch_Control_Unit|         ; 13 (13)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Branch_Control:Branch_Control_Unit                                                ; Branch_Control        ; work         ;
+;    |Control:CONTROL_UNIT|                       ; 18 (18)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Control:CONTROL_UNIT                                                              ; Control               ; work         ;
 ;    |Data_Memory:Data_Memory_Unit|               ; 5728 (5728)         ; 8192 (8192)               ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Data_Memory:Data_Memory_Unit                                                      ; Data_Memory           ; work         ;
-;    |Immediate_Unit:IMM_UNIT|                    ; 95 (95)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Immediate_Unit:IMM_UNIT                                                           ; Immediate_Unit        ; work         ;
+;    |Immediate_Unit:IMM_UNIT|                    ; 90 (90)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Immediate_Unit:IMM_UNIT                                                           ; Immediate_Unit        ; work         ;
 ;    |Multiplexer_2_to_1:MUX_ALU_OR_MEM_OUT|      ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Multiplexer_2_to_1:MUX_ALU_OR_MEM_OUT                                             ; Multiplexer_2_to_1    ; work         ;
-;    |Multiplexer_2_to_1:MUX_DATA_OR_IMM_FOR_ALU| ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Multiplexer_2_to_1:MUX_DATA_OR_IMM_FOR_ALU                                        ; Multiplexer_2_to_1    ; work         ;
-;    |PC_Register:PC|                             ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|PC_Register:PC                                                                    ; PC_Register           ; work         ;
-;    |Program_Memory:PROGRAM_MEMORY|              ; 25 (25)             ; 1 (1)                     ; 64          ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Program_Memory:PROGRAM_MEMORY                                                     ; Program_Memory        ; work         ;
-;       |altsyncram:rom_rtl_0|                    ; 0 (0)               ; 0 (0)                     ; 64          ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Program_Memory:PROGRAM_MEMORY|altsyncram:rom_rtl_0                                ; altsyncram            ; work         ;
-;          |altsyncram_4781:auto_generated|       ; 0 (0)               ; 0 (0)                     ; 64          ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Program_Memory:PROGRAM_MEMORY|altsyncram:rom_rtl_0|altsyncram_4781:auto_generated ; altsyncram_4781       ; work         ;
+;    |Multiplexer_2_to_1:MUX_DATA_OR_IMM_FOR_ALU| ; 24 (24)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Multiplexer_2_to_1:MUX_DATA_OR_IMM_FOR_ALU                                        ; Multiplexer_2_to_1    ; work         ;
+;    |Multiplexer_2_to_1:MUX_JALR_OR_IMM|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Multiplexer_2_to_1:MUX_JALR_OR_IMM                                                ; Multiplexer_2_to_1    ; work         ;
+;    |Multiplexer_2_to_1:MUX_PC4_OR_JMP|          ; 30 (30)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Multiplexer_2_to_1:MUX_PC4_OR_JMP                                                 ; Multiplexer_2_to_1    ; work         ;
+;    |PC_Register:PC|                             ; 1 (1)               ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|PC_Register:PC                                                                    ; PC_Register           ; work         ;
+;    |Program_Memory:PROGRAM_MEMORY|              ; 25 (25)             ; 1 (1)                     ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Program_Memory:PROGRAM_MEMORY                                                     ; Program_Memory        ; work         ;
+;       |altsyncram:rom_rtl_0|                    ; 0 (0)               ; 0 (0)                     ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Program_Memory:PROGRAM_MEMORY|altsyncram:rom_rtl_0                                ; altsyncram            ; work         ;
+;          |altsyncram_4781:auto_generated|       ; 0 (0)               ; 0 (0)                     ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Program_Memory:PROGRAM_MEMORY|altsyncram:rom_rtl_0|altsyncram_4781:auto_generated ; altsyncram_4781       ; work         ;
 ;    |Register_File:REGISTER_FILE_UNIT|           ; 1361 (0)            ; 992 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_File:REGISTER_FILE_UNIT                                                  ; Register_File         ; work         ;
 ;       |Decoder_Register_File:DECODER_REG_FILE|  ; 43 (43)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_File:REGISTER_FILE_UNIT|Decoder_Register_File:DECODER_REG_FILE           ; Decoder_Register_File ; work         ;
 ;       |MUXRegisterFile:MUXRegister1|            ; 645 (645)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_File:REGISTER_FILE_UNIT|MUXRegisterFile:MUXRegister1                     ; MUXRegisterFile       ; work         ;
@@ -408,19 +412,26 @@ https://fpgasoftware.intel.com/eula.
 ;       |Register:Register_t6|                    ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_File:REGISTER_FILE_UNIT|Register:Register_t6                             ; Register              ; work         ;
 ;       |Register:Register_tp|                    ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_File:REGISTER_FILE_UNIT|Register:Register_tp                             ; Register              ; work         ;
 ;       |SP_Register:Register_sp|                 ; 1 (1)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_File:REGISTER_FILE_UNIT|SP_Register:Register_sp                          ; SP_Register           ; work         ;
-;    |Register_Pipeline:EX_MEM_ALU_RES|           ; 54 (54)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_ALU_RES                                                  ; Register_Pipeline     ; work         ;
+;    |Register_Pipeline:EX_MEM_ALU_RES|           ; 48 (48)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_ALU_RES                                                  ; Register_Pipeline     ; work         ;
+;    |Register_Pipeline:EX_MEM_BRANCH|            ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_BRANCH                                                   ; Register_Pipeline     ; work         ;
+;    |Register_Pipeline:EX_MEM_JALR|              ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_JALR                                                     ; Register_Pipeline     ; work         ;
 ;    |Register_Pipeline:EX_MEM_MEMREG|            ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_MEMREG                                                   ; Register_Pipeline     ; work         ;
 ;    |Register_Pipeline:EX_MEM_MEMWR|             ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_MEMWR                                                    ; Register_Pipeline     ; work         ;
+;    |Register_Pipeline:EX_MEM_PC|                ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_PC                                                       ; Register_Pipeline     ; work         ;
 ;    |Register_Pipeline:EX_MEM_RD2|               ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_RD2                                                      ; Register_Pipeline     ; work         ;
 ;    |Register_Pipeline:EX_MEM_REGW|              ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_REGW                                                     ; Register_Pipeline     ; work         ;
 ;    |Register_Pipeline:ID_EX_ALUOP|              ; 0 (0)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_ALUOP                                                     ; Register_Pipeline     ; work         ;
 ;    |Register_Pipeline:ID_EX_ALUSRC|             ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_ALUSRC                                                    ; Register_Pipeline     ; work         ;
-;    |Register_Pipeline:ID_EX_IMM|                ; 6 (6)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_IMM                                                       ; Register_Pipeline     ; work         ;
+;    |Register_Pipeline:ID_EX_BRANCH|             ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_BRANCH                                                    ; Register_Pipeline     ; work         ;
+;    |Register_Pipeline:ID_EX_IMM|                ; 5 (5)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_IMM                                                       ; Register_Pipeline     ; work         ;
+;    |Register_Pipeline:ID_EX_JALR|               ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_JALR                                                      ; Register_Pipeline     ; work         ;
 ;    |Register_Pipeline:ID_EX_MEMWR|              ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_MEMWR                                                     ; Register_Pipeline     ; work         ;
 ;    |Register_Pipeline:ID_EX_MEWMREG|            ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_MEWMREG                                                   ; Register_Pipeline     ; work         ;
+;    |Register_Pipeline:ID_EX_PC|                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_PC                                                        ; Register_Pipeline     ; work         ;
 ;    |Register_Pipeline:ID_EX_RD1|                ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_RD1                                                       ; Register_Pipeline     ; work         ;
 ;    |Register_Pipeline:ID_EX_RD2|                ; 6 (6)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_RD2                                                       ; Register_Pipeline     ; work         ;
 ;    |Register_Pipeline:ID_EX_REGW|               ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_REGW                                                      ; Register_Pipeline     ; work         ;
+;    |Register_Pipeline:IF_ID_PC|                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:IF_ID_PC                                                        ; Register_Pipeline     ; work         ;
 ;    |Register_Pipeline:MEM_WB_ALU_RES|           ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:MEM_WB_ALU_RES                                                  ; Register_Pipeline     ; work         ;
 ;    |Register_Pipeline:MEM_WB_MEMREG|            ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:MEM_WB_MEMREG                                                   ; Register_Pipeline     ; work         ;
 ;    |Register_Pipeline:MEM_WB_RDATA|             ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:MEM_WB_RDATA                                                    ; Register_Pipeline     ; work         ;
@@ -443,12 +454,116 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------+-----------------------------------------------------------+
 ; Register name                                                             ; Reason for Removal                                        ;
 +---------------------------------------------------------------------------+-----------------------------------------------------------+
+; Register_Pipeline:EX_MEM_PC|DataOutput[1..31]                             ; Stuck at GND due to stuck port data_in                    ;
 ; Register_File:REGISTER_FILE_UNIT|Register:Register_zero|DataOutput[0..31] ; Stuck at GND due to stuck port data_in                    ;
-; PC_Register:PC|PC_Value[0..21,23..31]                                     ; Stuck at GND due to stuck port data_in                    ;
+; Register_Pipeline:ID_EX_PC|DataOutput[31]                                 ; Lost fanout                                               ;
+; Register_Pipeline:IF_ID_PC|DataOutput[31]                                 ; Lost fanout                                               ;
+; Register_Pipeline:ID_EX_PC|DataOutput[30]                                 ; Lost fanout                                               ;
+; Register_Pipeline:IF_ID_PC|DataOutput[30]                                 ; Lost fanout                                               ;
+; Register_Pipeline:ID_EX_PC|DataOutput[29]                                 ; Lost fanout                                               ;
+; Register_Pipeline:IF_ID_PC|DataOutput[29]                                 ; Lost fanout                                               ;
+; Register_Pipeline:ID_EX_PC|DataOutput[28]                                 ; Lost fanout                                               ;
+; Register_Pipeline:IF_ID_PC|DataOutput[28]                                 ; Lost fanout                                               ;
+; Register_Pipeline:ID_EX_PC|DataOutput[27]                                 ; Lost fanout                                               ;
+; Register_Pipeline:IF_ID_PC|DataOutput[27]                                 ; Lost fanout                                               ;
+; Register_Pipeline:ID_EX_PC|DataOutput[26]                                 ; Lost fanout                                               ;
+; Register_Pipeline:IF_ID_PC|DataOutput[26]                                 ; Lost fanout                                               ;
+; Register_Pipeline:ID_EX_PC|DataOutput[25]                                 ; Lost fanout                                               ;
+; Register_Pipeline:IF_ID_PC|DataOutput[25]                                 ; Lost fanout                                               ;
+; Register_Pipeline:ID_EX_PC|DataOutput[24]                                 ; Lost fanout                                               ;
+; Register_Pipeline:IF_ID_PC|DataOutput[24]                                 ; Lost fanout                                               ;
+; Register_Pipeline:ID_EX_PC|DataOutput[23]                                 ; Lost fanout                                               ;
+; Register_Pipeline:IF_ID_PC|DataOutput[23]                                 ; Lost fanout                                               ;
+; Register_Pipeline:ID_EX_PC|DataOutput[22]                                 ; Lost fanout                                               ;
+; Register_Pipeline:IF_ID_PC|DataOutput[22]                                 ; Lost fanout                                               ;
+; Register_Pipeline:ID_EX_PC|DataOutput[21]                                 ; Lost fanout                                               ;
+; Register_Pipeline:IF_ID_PC|DataOutput[21]                                 ; Lost fanout                                               ;
+; Register_Pipeline:ID_EX_PC|DataOutput[20]                                 ; Lost fanout                                               ;
+; Register_Pipeline:IF_ID_PC|DataOutput[20]                                 ; Lost fanout                                               ;
+; Register_Pipeline:ID_EX_PC|DataOutput[19]                                 ; Lost fanout                                               ;
+; Register_Pipeline:IF_ID_PC|DataOutput[19]                                 ; Lost fanout                                               ;
+; Register_Pipeline:ID_EX_PC|DataOutput[18]                                 ; Lost fanout                                               ;
+; Register_Pipeline:IF_ID_PC|DataOutput[18]                                 ; Lost fanout                                               ;
+; Register_Pipeline:ID_EX_PC|DataOutput[17]                                 ; Lost fanout                                               ;
+; Register_Pipeline:IF_ID_PC|DataOutput[17]                                 ; Lost fanout                                               ;
+; Register_Pipeline:ID_EX_PC|DataOutput[16]                                 ; Lost fanout                                               ;
+; Register_Pipeline:IF_ID_PC|DataOutput[16]                                 ; Lost fanout                                               ;
+; Register_Pipeline:ID_EX_PC|DataOutput[15]                                 ; Lost fanout                                               ;
+; Register_Pipeline:IF_ID_PC|DataOutput[15]                                 ; Lost fanout                                               ;
+; Register_Pipeline:ID_EX_PC|DataOutput[14]                                 ; Lost fanout                                               ;
+; Register_Pipeline:IF_ID_PC|DataOutput[14]                                 ; Lost fanout                                               ;
+; Register_Pipeline:ID_EX_PC|DataOutput[13]                                 ; Lost fanout                                               ;
+; Register_Pipeline:IF_ID_PC|DataOutput[13]                                 ; Lost fanout                                               ;
+; Register_Pipeline:ID_EX_PC|DataOutput[12]                                 ; Lost fanout                                               ;
+; Register_Pipeline:IF_ID_PC|DataOutput[12]                                 ; Lost fanout                                               ;
+; Register_Pipeline:ID_EX_PC|DataOutput[11]                                 ; Lost fanout                                               ;
+; Register_Pipeline:IF_ID_PC|DataOutput[11]                                 ; Lost fanout                                               ;
+; Register_Pipeline:ID_EX_PC|DataOutput[10]                                 ; Lost fanout                                               ;
+; Register_Pipeline:IF_ID_PC|DataOutput[10]                                 ; Lost fanout                                               ;
+; Register_Pipeline:ID_EX_PC|DataOutput[9]                                  ; Lost fanout                                               ;
+; Register_Pipeline:IF_ID_PC|DataOutput[9]                                  ; Lost fanout                                               ;
+; Register_Pipeline:ID_EX_PC|DataOutput[8]                                  ; Lost fanout                                               ;
+; Register_Pipeline:IF_ID_PC|DataOutput[8]                                  ; Lost fanout                                               ;
+; Register_Pipeline:ID_EX_PC|DataOutput[7]                                  ; Lost fanout                                               ;
+; Register_Pipeline:IF_ID_PC|DataOutput[7]                                  ; Lost fanout                                               ;
+; Register_Pipeline:ID_EX_PC|DataOutput[6]                                  ; Lost fanout                                               ;
+; Register_Pipeline:IF_ID_PC|DataOutput[6]                                  ; Lost fanout                                               ;
+; Register_Pipeline:ID_EX_PC|DataOutput[5]                                  ; Lost fanout                                               ;
+; Register_Pipeline:IF_ID_PC|DataOutput[5]                                  ; Lost fanout                                               ;
+; Register_Pipeline:ID_EX_PC|DataOutput[4]                                  ; Lost fanout                                               ;
+; Register_Pipeline:IF_ID_PC|DataOutput[4]                                  ; Lost fanout                                               ;
+; Register_Pipeline:ID_EX_PC|DataOutput[3]                                  ; Lost fanout                                               ;
+; Register_Pipeline:IF_ID_PC|DataOutput[3]                                  ; Lost fanout                                               ;
+; Register_Pipeline:ID_EX_PC|DataOutput[2]                                  ; Lost fanout                                               ;
+; Register_Pipeline:IF_ID_PC|DataOutput[2]                                  ; Lost fanout                                               ;
+; Register_Pipeline:ID_EX_PC|DataOutput[1]                                  ; Lost fanout                                               ;
+; Register_Pipeline:IF_ID_PC|DataOutput[1]                                  ; Lost fanout                                               ;
 ; Register_Pipeline:ID_EX_MEMRD|DataOutput[0]                               ; Merged with Register_Pipeline:ID_EX_MEWMREG|DataOutput[0] ;
 ; Register_Pipeline:EX_MEM_MEMRD|DataOutput[0]                              ; Merged with Register_Pipeline:EX_MEM_MEMREG|DataOutput[0] ;
-; Total Number of Removed Registers = 65                                    ;                                                           ;
+; PC_Register:PC|PC_Value[1]                                                ; Stuck at GND due to stuck port data_in                    ;
+; Total Number of Removed Registers = 128                                   ;                                                           ;
 +---------------------------------------------------------------------------+-----------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                       ;
++-------------------------------------------+---------------------------+-------------------------------------------+
+; Register name                             ; Reason for Removal        ; Registers Removed due to This Register    ;
++-------------------------------------------+---------------------------+-------------------------------------------+
+; Register_Pipeline:EX_MEM_PC|DataOutput[1] ; Stuck at GND              ; PC_Register:PC|PC_Value[1]                ;
+;                                           ; due to stuck port data_in ;                                           ;
+; Register_Pipeline:ID_EX_PC|DataOutput[31] ; Lost Fanouts              ; Register_Pipeline:IF_ID_PC|DataOutput[31] ;
+; Register_Pipeline:ID_EX_PC|DataOutput[30] ; Lost Fanouts              ; Register_Pipeline:IF_ID_PC|DataOutput[30] ;
+; Register_Pipeline:ID_EX_PC|DataOutput[29] ; Lost Fanouts              ; Register_Pipeline:IF_ID_PC|DataOutput[29] ;
+; Register_Pipeline:ID_EX_PC|DataOutput[28] ; Lost Fanouts              ; Register_Pipeline:IF_ID_PC|DataOutput[28] ;
+; Register_Pipeline:ID_EX_PC|DataOutput[27] ; Lost Fanouts              ; Register_Pipeline:IF_ID_PC|DataOutput[27] ;
+; Register_Pipeline:ID_EX_PC|DataOutput[26] ; Lost Fanouts              ; Register_Pipeline:IF_ID_PC|DataOutput[26] ;
+; Register_Pipeline:ID_EX_PC|DataOutput[25] ; Lost Fanouts              ; Register_Pipeline:IF_ID_PC|DataOutput[25] ;
+; Register_Pipeline:ID_EX_PC|DataOutput[24] ; Lost Fanouts              ; Register_Pipeline:IF_ID_PC|DataOutput[24] ;
+; Register_Pipeline:ID_EX_PC|DataOutput[23] ; Lost Fanouts              ; Register_Pipeline:IF_ID_PC|DataOutput[23] ;
+; Register_Pipeline:ID_EX_PC|DataOutput[22] ; Lost Fanouts              ; Register_Pipeline:IF_ID_PC|DataOutput[22] ;
+; Register_Pipeline:ID_EX_PC|DataOutput[21] ; Lost Fanouts              ; Register_Pipeline:IF_ID_PC|DataOutput[21] ;
+; Register_Pipeline:ID_EX_PC|DataOutput[20] ; Lost Fanouts              ; Register_Pipeline:IF_ID_PC|DataOutput[20] ;
+; Register_Pipeline:ID_EX_PC|DataOutput[19] ; Lost Fanouts              ; Register_Pipeline:IF_ID_PC|DataOutput[19] ;
+; Register_Pipeline:ID_EX_PC|DataOutput[18] ; Lost Fanouts              ; Register_Pipeline:IF_ID_PC|DataOutput[18] ;
+; Register_Pipeline:ID_EX_PC|DataOutput[17] ; Lost Fanouts              ; Register_Pipeline:IF_ID_PC|DataOutput[17] ;
+; Register_Pipeline:ID_EX_PC|DataOutput[16] ; Lost Fanouts              ; Register_Pipeline:IF_ID_PC|DataOutput[16] ;
+; Register_Pipeline:ID_EX_PC|DataOutput[15] ; Lost Fanouts              ; Register_Pipeline:IF_ID_PC|DataOutput[15] ;
+; Register_Pipeline:ID_EX_PC|DataOutput[14] ; Lost Fanouts              ; Register_Pipeline:IF_ID_PC|DataOutput[14] ;
+; Register_Pipeline:ID_EX_PC|DataOutput[13] ; Lost Fanouts              ; Register_Pipeline:IF_ID_PC|DataOutput[13] ;
+; Register_Pipeline:ID_EX_PC|DataOutput[12] ; Lost Fanouts              ; Register_Pipeline:IF_ID_PC|DataOutput[12] ;
+; Register_Pipeline:ID_EX_PC|DataOutput[11] ; Lost Fanouts              ; Register_Pipeline:IF_ID_PC|DataOutput[11] ;
+; Register_Pipeline:ID_EX_PC|DataOutput[10] ; Lost Fanouts              ; Register_Pipeline:IF_ID_PC|DataOutput[10] ;
+; Register_Pipeline:ID_EX_PC|DataOutput[9]  ; Lost Fanouts              ; Register_Pipeline:IF_ID_PC|DataOutput[9]  ;
+; Register_Pipeline:ID_EX_PC|DataOutput[8]  ; Lost Fanouts              ; Register_Pipeline:IF_ID_PC|DataOutput[8]  ;
+; Register_Pipeline:ID_EX_PC|DataOutput[7]  ; Lost Fanouts              ; Register_Pipeline:IF_ID_PC|DataOutput[7]  ;
+; Register_Pipeline:ID_EX_PC|DataOutput[6]  ; Lost Fanouts              ; Register_Pipeline:IF_ID_PC|DataOutput[6]  ;
+; Register_Pipeline:ID_EX_PC|DataOutput[5]  ; Lost Fanouts              ; Register_Pipeline:IF_ID_PC|DataOutput[5]  ;
+; Register_Pipeline:ID_EX_PC|DataOutput[4]  ; Lost Fanouts              ; Register_Pipeline:IF_ID_PC|DataOutput[4]  ;
+; Register_Pipeline:ID_EX_PC|DataOutput[3]  ; Lost Fanouts              ; Register_Pipeline:IF_ID_PC|DataOutput[3]  ;
+; Register_Pipeline:ID_EX_PC|DataOutput[2]  ; Lost Fanouts              ; Register_Pipeline:IF_ID_PC|DataOutput[2]  ;
+; Register_Pipeline:ID_EX_PC|DataOutput[1]  ; Lost Fanouts              ; Register_Pipeline:IF_ID_PC|DataOutput[1]  ;
++-------------------------------------------+---------------------------+-------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -456,10 +571,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 9422  ;
-; Number of registers using Synchronous Clear  ; 47    ;
-; Number of registers using Synchronous Load   ; 19    ;
-; Number of registers using Asynchronous Clear ; 1230  ;
+; Total registers                              ; 9459  ;
+; Number of registers using Synchronous Clear  ; 40    ;
+; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Asynchronous Clear ; 1267  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 9184  ;
 ; Number of registers using Preset             ; 0     ;
@@ -491,22 +606,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
-; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_IMM|DataOutput[21]                          ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_RD2|DataOutput[28]                          ;
-; 8:1                ; 6 bits    ; 30 LEs        ; 18 LEs               ; 12 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_IMM|DataOutput[25]                          ;
-; 9:1                ; 8 bits    ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_IMM|DataOutput[18]                          ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_IMM|DataOutput[22]                          ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_RD2|DataOutput[1]                           ;
+; 8:1                ; 6 bits    ; 30 LEs        ; 18 LEs               ; 12 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_IMM|DataOutput[26]                          ;
+; 9:1                ; 8 bits    ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_IMM|DataOutput[12]                          ;
 ; 13:1               ; 3 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_IMM|DataOutput[2]                           ;
-; 18:1               ; 8 bits    ; 96 LEs        ; 48 LEs               ; 48 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_ALU_RES|DataOutput[11]                     ;
-; 18:1               ; 7 bits    ; 84 LEs        ; 42 LEs               ; 42 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_ALU_RES|DataOutput[16]                     ;
-; 19:1               ; 4 bits    ; 48 LEs        ; 28 LEs               ; 20 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_ALU_RES|DataOutput[6]                      ;
-; 19:1               ; 4 bits    ; 48 LEs        ; 28 LEs               ; 20 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_ALU_RES|DataOutput[25]                     ;
-; 20:1               ; 2 bits    ; 26 LEs        ; 16 LEs               ; 10 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_ALU_RES|DataOutput[29]                     ;
-; 21:1               ; 2 bits    ; 28 LEs        ; 16 LEs               ; 12 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_ALU_RES|DataOutput[1]                      ;
-; 21:1               ; 2 bits    ; 28 LEs        ; 16 LEs               ; 12 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_ALU_RES|DataOutput[31]                     ;
+; 19:1               ; 8 bits    ; 96 LEs        ; 56 LEs               ; 40 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_ALU_RES|DataOutput[10]                     ;
+; 19:1               ; 8 bits    ; 96 LEs        ; 56 LEs               ; 40 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_ALU_RES|DataOutput[19]                     ;
+; 20:1               ; 4 bits    ; 52 LEs        ; 32 LEs               ; 20 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_ALU_RES|DataOutput[7]                      ;
+; 20:1               ; 4 bits    ; 52 LEs        ; 32 LEs               ; 20 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_ALU_RES|DataOutput[27]                     ;
+; 21:1               ; 2 bits    ; 28 LEs        ; 18 LEs               ; 10 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_ALU_RES|DataOutput[2]                      ;
+; 21:1               ; 2 bits    ; 28 LEs        ; 18 LEs               ; 10 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_ALU_RES|DataOutput[29]                     ;
+; 22:1               ; 2 bits    ; 28 LEs        ; 18 LEs               ; 10 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_ALU_RES|DataOutput[31]                     ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |RISC_V_Single_Cycle|Immediate_Unit:IMM_UNIT|Selector25                                  ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |RISC_V_Single_Cycle|Immediate_Unit:IMM_UNIT|Selector25                                  ;
 ; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; No         ; |RISC_V_Single_Cycle|ALU:ALU_UNIT|Add0                                                   ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 640 LEs              ; 32 LEs                 ; No         ; |RISC_V_Single_Cycle|Register_File:REGISTER_FILE_UNIT|MUXRegisterFile:MUXRegister1|Mux29 ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 640 LEs              ; 32 LEs                 ; No         ; |RISC_V_Single_Cycle|Register_File:REGISTER_FILE_UNIT|MUXRegisterFile:MUXRegister1|Mux23 ;
 ; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |RISC_V_Single_Cycle|ALU:ALU_UNIT|Add0                                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
 
@@ -1637,16 +1752,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Multiplexer_2_to_1:MUX_PC4_OR_JMP"                                                                                                                             ;
-+--------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port         ; Type   ; Severity ; Details                                                                                                                                                ;
-+--------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Mux_Data_1_i ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "Mux_Data_1_i[31..1]" will be connected to GND. ;
-; Mux_Output_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                    ;
-+--------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "Multiplexer_2_to_1:MUX_JALR_OR_IMM"                                                                                                       ;
 +--------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------+
@@ -1673,27 +1778,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 34                          ;
-; cycloneiii_ff         ; 9422                        ;
-;     CLR               ; 187                         ;
+; cycloneiii_ff         ; 9459                        ;
+;     CLR               ; 235                         ;
 ;     CLR SCLR          ; 32                          ;
-;     CLR SCLR SLD      ; 15                          ;
-;     CLR SLD           ; 4                           ;
+;     CLR SCLR SLD      ; 8                           ;
 ;     ENA               ; 8192                        ;
 ;     ENA CLR           ; 992                         ;
-; cycloneiii_lcell_comb ; 7899                        ;
-;     arith             ; 32                          ;
-;         2 data inputs ; 1                           ;
+; cycloneiii_lcell_comb ; 7992                        ;
+;     arith             ; 61                          ;
+;         2 data inputs ; 30                          ;
 ;         3 data inputs ; 31                          ;
-;     normal            ; 7867                        ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 81                          ;
-;         3 data inputs ; 557                         ;
-;         4 data inputs ; 7227                        ;
+;     normal            ; 7931                        ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 120                         ;
+;         3 data inputs ; 553                         ;
+;         4 data inputs ; 7256                        ;
 ; cycloneiii_ram_block  ; 32                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 11.00                       ;
-; Average LUT depth     ; 6.13                        ;
+; Max LUT depth         ; 12.00                       ;
+; Average LUT depth     ; 6.16                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1712,7 +1815,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Fri Jul  8 22:51:29 2022
+    Info: Processing started: Fri Jul  8 23:50:02 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RISC_V_Single_Cycle -c RISC_V_Single_Cycle
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -1806,21 +1909,21 @@ Info (12133): Instantiated megafunction "Program_Memory:PROGRAM_MEMORY|altsyncra
     Info (12134): Parameter "INIT_FILE" = "db/RISC_V_Single_Cycle.ram0_Program_Memory_49bd8618.hdl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_4781.tdf
     Info (12023): Found entity 1: altsyncram_4781 File: E:/RISCV_SC/RISC_V_SC-main/ProjectQuartus/db/altsyncram_4781.tdf Line: 28
-Warning (12241): 20 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 19 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13000): Registers with preset signals will power-up high File: E:/RISCV_SC/RISC_V_SC-main/src/SP_Register.v Line: 19
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
-Info (17036): Removed 5 MSB VCC or GND address nodes from RAM block "Program_Memory:PROGRAM_MEMORY|altsyncram:rom_rtl_0|altsyncram_4781:auto_generated|ALTSYNCRAM" File: E:/RISCV_SC/RISC_V_SC-main/ProjectQuartus/db/altsyncram_4781.tdf Line: 371
+Info (17049): 62 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 17251 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 17355 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 17185 logic cells
+    Info (21061): Implemented 17289 logic cells
     Info (21064): Implemented 32 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4927 megabytes
-    Info: Processing ended: Fri Jul  8 22:52:10 2022
+    Info: Peak virtual memory: 4930 megabytes
+    Info: Processing ended: Fri Jul  8 23:50:43 2022
     Info: Elapsed time: 00:00:41
     Info: Total CPU time (on all processors): 00:00:58
 

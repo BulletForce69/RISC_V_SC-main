@@ -241,9 +241,9 @@ MUX_PC4_OR_JMP
 (
 	.Selector_i(Branch_Flag_w),
 	.Mux_Data_0_i(pc_plus_4_w),
-	.Mux_Data_1_i(Jmp_Out_w),
+	.Mux_Data_1_i(Pipe_PCJMP_w),
 	
-	.Mux_Output_o(Pipe_PCJMP_w)
+	.Mux_Output_o(Next_PC_w)
 
 );
 
