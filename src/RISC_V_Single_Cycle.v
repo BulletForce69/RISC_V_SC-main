@@ -126,6 +126,9 @@ wire pipe2_MemReg_w;
 wire pipe3_MemReg_w;
 wire pipe4_MemReg_w;
 
+wire [4:0] Pipe2_WrReg;
+wire [4:0] Pipe3_WrReg;
+wire [4:0] Pipe4_WrReg;
 
 
 
@@ -306,7 +309,9 @@ REGISTER_FILE_UNIT
 	.clk(clk),
 	.reset(reset),
 	.Reg_Write_i(pipe4_RegW_w),
-	.Write_Register_i(Pipe_Instr_w[11:7]),
+	
+	.Write_Register_i(Pipe4_WrReg),
+	
 	.Read_Register_1_i(Pipe_Instr_w[19:15]),
 	.Read_Register_2_i(Pipe_Instr_w[24:20]),
 	.Write_Data_i(ALU_OR_MEM_w),
@@ -413,7 +418,7 @@ ID_EX_PC
 );
 
 Register_Pipeline
-ID_EX_RD1
+ID_EX_RS1
 (
 	.clk(clk),
 	.reset(reset),
@@ -425,7 +430,7 @@ ID_EX_RD1
 );
 
 Register_Pipeline
-ID_EX_RD2
+ID_EX_RS2
 (
 	.clk(clk),
 	.reset(reset),
@@ -434,6 +439,20 @@ ID_EX_RD2
 	
 	
 	.DataOutput(Pipe_Rd2_w)
+);
+
+
+
+Register_Pipeline
+ID_EX_RD
+(
+	.clk(clk),
+	.reset(reset),
+	.enable(1'b1),
+	.DataInput(Pipe_Instr_w[11:7]),
+	
+	
+	.DataOutput(Pipe2_WrReg)
 );
 
 Register_Pipeline
@@ -586,6 +605,18 @@ EX_MEM_RD2
 	.DataOutput(Pipe3_Rd2_w)
 );
 
+Register_Pipeline
+EX_MEM_RD
+(
+	.clk(clk),
+	.reset(reset),
+	.enable(1'b1),
+	.DataInput(Pipe2_WrReg),
+	
+	
+	.DataOutput(Pipe3_WrReg)
+);
+
 // 		Señales de control (3)
 Register_Pipeline
 EX_MEM_MEMWR
@@ -684,6 +715,18 @@ MEM_WB_ALU_RES
 	
 	
 	.DataOutput(Pipe4_ALURes_w)
+);
+
+Register_Pipeline
+MEM_WB_RD
+(
+	.clk(clk),
+	.reset(reset),
+	.enable(1'b1),
+	.DataInput(Pipe3_WrReg),
+	
+	
+	.DataOutput(Pipe4_WrReg)
 );
 
 // 		Señales de control (4)
