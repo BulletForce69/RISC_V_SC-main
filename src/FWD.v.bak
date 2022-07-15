@@ -1,0 +1,29 @@
+module FWD
+(
+	input [31:0]ReadDataMEM,	//dato que se va a forwardear de Memoria
+	input [31:0]ALURESEX,	//dato que se va a forwardear de Memoria
+	input [31:0]ALURESMEM,	//dato que se va a forwardear de Memoria
+	input MEMtoREG, //Para saber en caso de que el FW sea desde MEM cual Dato sale
+	
+	input ForwardEX, 		
+	input ForwardMEM,
+	/** entradas de un comparador que detecta hazard de datos, 
+		es decir si los registros usados en la instrucción no tienen el dato más reciente**/
+	input UpdateA,
+	input UpdateB,
+// entradas para saber cual registro es el que no está actualizado
+	output reg [31:0]ForwardData,
+	output ForwardA,
+	output ForwardB
+);
+Assign ForwardA = UpdateA;
+Assign ForwardB = UpdateB;
+
+always@(ForwardEXMEM or  ReadDataMEM) 
+begin
+	if(ForwardMEM == 1'b1 && MEMtoREG == 1'b1){
+		ForwardData = ReadDataMEM;
+	}
+end
+
+endmodule

@@ -1,0 +1,7 @@
+module HazardControl
+(
+	input [31:0]ReadDataMEM,	//dato que se va a forwardear de Memoria
+	input [4:0]ALUResEX,	//dato que se va a forwardear de Memoria
+	input [4:0]ALUResMEM,	//dato que se va a forwardear de Memoria
+	
+);
