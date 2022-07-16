@@ -31,13 +31,13 @@ begin
 		UpdateB = 1'b0;
 	
 	//desde MEM
-	if((RegDMEM == Instr[19:15] || RegDMEM == Instr[24:20]) && RegWR == 1'b1 && RegDMEM != 4'b0)
+	if((RegDMEM == Instr[19:15] || RegDMEM == Instr[24:20]) && RegWR == 1'b1 && RegDMEM != 5'b0)
 		FwMEM = 1'b1;
 	else
 		FwMEM = 1'b0;
 	
 	//desde WB
-	if((RegDWB == Instr[19:15] || RegDWB == Instr[24:20]) && RegWR == 1'b1 && RegDWB != 4'b0)
+	if((RegDWB == Instr[19:15] || RegDWB == Instr[24:20]) && RegWR == 1'b1 && RegDWB != 5'b0)
 		FwWB = 1'b1;
 	else
 		FwWB = 1'b0;
