@@ -85,6 +85,7 @@ wire [31:0] JALR_Res_w;
 wire JALR_f;
 
 /** Pipeline Wires **/
+wire Flush_w;
 
 wire [31:0] Pipe_PC_w;
 wire [31:0] Pipe_Instr_w;
@@ -116,7 +117,6 @@ wire pipe2_Branch_w;
 wire pipe3_Branch_w;
 
 wire pipe2_JALR_w;
-wire pipe3_JALR_w;
 
 wire pipe2_RegW_w;
 wire pipe3_RegW_w;
@@ -130,6 +130,20 @@ wire [4:0] Pipe2_WrReg;
 wire [4:0] Pipe3_WrReg;
 wire [4:0] Pipe4_WrReg;
 
+// FW y Hazard Wires
+wire Forward_WB_w;
+wire Forward_MEM_w;
+
+wire UpdateA_w;
+wire UpdateB_w;
+
+wire ForwardA_w;
+wire ForwardB_w;
+
+wire ForwardData_w;
+
+wire [31:0] A_Forwarded;
+wire [31:0] B_Forwarded;
 
 
 
@@ -223,7 +237,7 @@ Multiplexer_2_to_1
 )
 MUX_JALR_OR_IMM
 (
-	.Selector_i(pipe3_JALR_w),
+	.Selector_i(pipe2_JALR_w),
 	.Mux_Data_0_i(pc_plus_jmp_w),
 	.Mux_Data_1_i(JALR_Res_w),
 	
@@ -340,7 +354,7 @@ Multiplexer_2_to_1
 MUX_DATA_OR_IMM_FOR_ALU
 (
 	.Selector_i(pipe2_ALUSrc_w),
-	.Mux_Data_0_i(Pipe_Rd2_w),
+	.Mux_Data_0_i(B_Forwarded),
 	.Mux_Data_1_i(Pipe_Imm_w),
 	
 	.Mux_Output_o(read_data_2_or_imm_w)
@@ -365,13 +379,78 @@ ALU
 ALU_UNIT
 (
 	.ALU_Operation_i(alu_operation_w),
-	.A_i(Pipe_Rd1_w),
+	.A_i(A_Forwarded),
 	.B_i(read_data_2_or_imm_w),
 	.Pc4(pc_plus_4_w),
 	.Zero_o(Zero_Flag_w),
 	.ALU_Result_o(alu_result_w)
 );
 
+Forwarding
+FORWARDING_UNIT
+(
+	.ReadDataWB(Pipe_RdData_w),	
+	.ALUResWB(Pipe4_ALURes_w),	
+	.ALUResMEM(Pipe_ALURes_w),	
+	.MEMtoREG(pipe4_MemReg_w), 
+	
+	.ForwardWB(Forward_WB_w), 		
+	.ForwardMEM(Forward_MEM_w),
+	
+	.UpdateA(UpdateA_w),
+	.UpdateB(UpdateB_w),
+
+	.ForwardData(ForwardData_w),
+	.ForwardA(ForwardA_w),
+	.ForwardB(ForwardB_w)
+);
+
+HazardControl
+HAZARD_CONTROL_UNIT
+(
+	.Instr(Pipe_Instr_w),	
+	.RegDWB(Pipe3_WrReg),	
+	.RegDMEM(Pipe4_WrReg),
+	.RegWR(pipe2_RegW_w),
+	.BranchF(Branch_Flag_w),
+	
+	.FwWB(Forward_WB_w),
+	.FwMEM(Forward_MEM_w),
+	.UpdateA(UpdateA_w),
+	.UpdateB(UpdateB_w),
+	.Flush(Flush_w)
+	
+);
+
+// Mux para ver si el dato que ira  la ALU en EX viene del FW Unit o es el del Pipeline ID/EX
+
+Multiplexer_2_to_1
+#(
+	.NBits(32)
+)
+MUX_FWA_OR_A
+(
+	.Selector_i(ForwardA_w),
+	.Mux_Data_0_i(Pipe_Rd1_w),
+	.Mux_Data_1_i(ForwardData_w),
+	
+	.Mux_Output_o(A_Forwarded)
+
+);
+
+Multiplexer_2_to_1
+#(
+	.NBits(32)
+)
+MUX_FWB_OR_B
+(
+	.Selector_i(ForwardB_w),
+	.Mux_Data_0_i(Pipe_Rd2_w),
+	.Mux_Data_1_i(ForwardData_w),
+	
+	.Mux_Output_o(B_Forwarded)
+
+);
 
 /*
 	IF/ID Pipeline ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -382,6 +461,7 @@ IF_ID_PC
 (
 	.clk(clk),
 	.reset(reset),
+	.flush(Flush_w),
 	.enable(1'b1),
 	.DataInput(pc_w),
 	
@@ -393,6 +473,7 @@ IF_ID_Instr
 (
 	.clk(clk),
 	.reset(reset),
+	.flush(Flush_w),
 	.enable(1'b1),
 	.DataInput(instruction_bus_w),
 	
@@ -410,6 +491,7 @@ ID_EX_PC
 (
 	.clk(clk),
 	.reset(reset),
+	.flush(Flush_w),
 	.enable(1'b1),
 	.DataInput(Pipe_PC_w),
 	
@@ -422,6 +504,7 @@ ID_EX_RS1
 (
 	.clk(clk),
 	.reset(reset),
+	.flush(Flush_w),
 	.enable(1'b1),
 	.DataInput(read_data_1_w),
 	
@@ -434,6 +517,7 @@ ID_EX_RS2
 (
 	.clk(clk),
 	.reset(reset),
+	.flush(Flush_w),
 	.enable(1'b1),
 	.DataInput(read_data_2_w),
 	
@@ -448,6 +532,7 @@ ID_EX_RD
 (
 	.clk(clk),
 	.reset(reset),
+	.flush(Flush_w),
 	.enable(1'b1),
 	.DataInput(Pipe_Instr_w[11:7]),
 	
@@ -460,6 +545,7 @@ ID_EX_IMM
 (
 	.clk(clk),
 	.reset(reset),
+	.flush(Flush_w),
 	.enable(1'b1),
 	.DataInput(inmmediate_data_w),
 	
@@ -469,10 +555,14 @@ ID_EX_IMM
 
 // 		Señales de control
 Register_Pipeline
+#(
+	.N(3)
+)
 ID_EX_ALUOP
 (
 	.clk(clk),
 	.reset(reset),
+	.flush(Flush_w),
 	.enable(1'b1),
 	.DataInput(alu_op_w),
 	
@@ -481,10 +571,14 @@ ID_EX_ALUOP
 );
 
 Register_Pipeline
+#(
+	.N(1)
+)
 ID_EX_ALUSRC
 (
 	.clk(clk),
 	.reset(reset),
+	.flush(Flush_w),
 	.enable(1'b1),
 	.DataInput(alu_src_w),
 	
@@ -493,10 +587,14 @@ ID_EX_ALUSRC
 );
 
 Register_Pipeline
+#(
+	.N(1)
+)
 ID_EX_MEMWR
 (
 	.clk(clk),
 	.reset(reset),
+	.flush(Flush_w),
 	.enable(1'b1),
 	.DataInput(mem_write_w),
 	
@@ -505,10 +603,14 @@ ID_EX_MEMWR
 );
 
 Register_Pipeline
+#(
+	.N(1)
+)
 ID_EX_MEMRD
 (
 	.clk(clk),
 	.reset(reset),
+	.flush(Flush_w),
 	.enable(1'b1),
 	.DataInput(mem_read_w),
 	
@@ -517,10 +619,14 @@ ID_EX_MEMRD
 );
 
 Register_Pipeline
+#(
+	.N(1)
+)
 ID_EX_BRANCH
 (
 	.clk(clk),
 	.reset(reset),
+	.flush(Flush_w),
 	.enable(1'b1),
 	.DataInput(Branch_w),
 	
@@ -529,10 +635,14 @@ ID_EX_BRANCH
 );
 
 Register_Pipeline
+#(
+	.N(1)
+)
 ID_EX_JALR
 (
 	.clk(clk),
 	.reset(reset),
+	.flush(Flush_w),
 	.enable(1'b1),
 	.DataInput(JALR_f),
 	
@@ -541,10 +651,14 @@ ID_EX_JALR
 );
 
 Register_Pipeline
+#(
+	.N(1)
+)
 ID_EX_REGW
 (
 	.clk(clk),
 	.reset(reset),
+	.flush(Flush_w),
 	.enable(1'b1),
 	.DataInput(reg_write_w),
 	
@@ -553,10 +667,14 @@ ID_EX_REGW
 );
 
 Register_Pipeline
+#(
+	.N(1)
+)
 ID_EX_MEWMREG
 (
 	.clk(clk),
 	.reset(reset),
+	.flush(Flush_w),
 	.enable(1'b1),
 	.DataInput(mem_to_reg_w),
 	
@@ -574,6 +692,7 @@ EX_MEM_PC
 (
 	.clk(clk),
 	.reset(reset),
+	.flush(1'b0),
 	.enable(1'b1),
 	.DataInput(Jmp_Out_w),
 	
@@ -586,6 +705,7 @@ EX_MEM_ALU_RES
 (
 	.clk(clk),
 	.reset(reset),
+	.flush(1'b0),
 	.enable(1'b1),
 	.DataInput(alu_result_w),
 	
@@ -598,6 +718,7 @@ EX_MEM_RD2
 (
 	.clk(clk),
 	.reset(reset),
+	.flush(1'b0),
 	.enable(1'b1),
 	.DataInput(Pipe_Rd2_w),
 	
@@ -610,6 +731,7 @@ EX_MEM_RD
 (
 	.clk(clk),
 	.reset(reset),
+	.flush(1'b0),
 	.enable(1'b1),
 	.DataInput(Pipe2_WrReg),
 	
@@ -619,10 +741,14 @@ EX_MEM_RD
 
 // 		Señales de control (3)
 Register_Pipeline
+#(
+	.N(1)
+)
 EX_MEM_MEMWR
 (
 	.clk(clk),
 	.reset(reset),
+	.flush(1'b0),
 	.enable(1'b1),
 	.DataInput(pipe2_MemWr_w),
 	
@@ -631,10 +757,14 @@ EX_MEM_MEMWR
 );
 
 Register_Pipeline
+#(
+	.N(1)
+)
 EX_MEM_MEMRD
 (
 	.clk(clk),
 	.reset(reset),
+	.flush(1'b0),
 	.enable(1'b1),
 	.DataInput(pipe2_MemRd_w),
 	
@@ -643,10 +773,14 @@ EX_MEM_MEMRD
 );
 
 Register_Pipeline
+#(
+	.N(1)
+)
 EX_MEM_BRANCH
 (
 	.clk(clk),
 	.reset(reset),
+	.flush(1'b0),
 	.enable(1'b1),
 	.DataInput(pipe2_Branch_w),
 	
@@ -654,23 +788,17 @@ EX_MEM_BRANCH
 	.DataOutput(pipe3_Branch_w)
 );
 
-Register_Pipeline
-EX_MEM_JALR
-(
-	.clk(clk),
-	.reset(reset),
-	.enable(1'b1),
-	.DataInput(pipe2_JALR_w),
-	
-	
-	.DataOutput(pipe3_JALR_w)
-);
+
 
 Register_Pipeline
+#(
+	.N(1)
+)
 EX_MEM_REGW
 (
 	.clk(clk),
 	.reset(reset),
+	.flush(1'b0),
 	.enable(1'b1),
 	.DataInput(pipe2_RegW_w),
 	
@@ -679,10 +807,14 @@ EX_MEM_REGW
 );
 
 Register_Pipeline
+#(
+	.N(1)
+)
 EX_MEM_MEMREG
 (
 	.clk(clk),
 	.reset(reset),
+	.flush(1'b0),
 	.enable(1'b1),
 	.DataInput(pipe2_MemReg_w),
 	
@@ -698,6 +830,7 @@ MEM_WB_RDATA
 (
 	.clk(clk),
 	.reset(reset),
+	.flush(1'b0),
 	.enable(1'b1),
 	.DataInput(Read_Mem_Data_w),
 	
@@ -710,6 +843,7 @@ MEM_WB_ALU_RES
 (
 	.clk(clk),
 	.reset(reset),
+	.flush(1'b0),
 	.enable(1'b1),
 	.DataInput(Pipe_ALURes_w),
 	
@@ -722,6 +856,7 @@ MEM_WB_RD
 (
 	.clk(clk),
 	.reset(reset),
+	.flush(1'b0),
 	.enable(1'b1),
 	.DataInput(Pipe3_WrReg),
 	
@@ -732,10 +867,14 @@ MEM_WB_RD
 // 		Señales de control (4)
 
 Register_Pipeline
+#(
+	.N(1)
+)
 MEM_WB_REGW
 (
 	.clk(clk),
 	.reset(reset),
+	.flush(1'b0),
 	.enable(1'b1),
 	.DataInput(pipe3_RegW_w),
 	
@@ -744,10 +883,14 @@ MEM_WB_REGW
 );
 
 Register_Pipeline
+#(
+	.N(1)
+)
 MEM_WB_MEMREG
 (
 	.clk(clk),
 	.reset(reset),
+	.flush(1'b0),
 	.enable(1'b1),
 	.DataInput(pipe3_MemReg_w),
 	

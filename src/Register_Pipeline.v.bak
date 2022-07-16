@@ -6,15 +6,14 @@ module Register_Pipeline
 	input clk,
 	input reset,
 	input enable,
-	input flush,
 	input  [N-1:0] DataInput,
 	
 	
 	output reg [N-1:0] DataOutput
 );
 
-always@(negedge reset or negedge clk or posedge flush) begin
-	if(reset==0 || flush == 1)
+always@(negedge reset or negedge clk) begin
+	if(reset==0)
 		DataOutput <= 0;
 	else	
 		if(enable==1)

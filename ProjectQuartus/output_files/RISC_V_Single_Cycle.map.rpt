@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RISC_V_Single_Cycle
-Fri Jul  8 23:50:43 2022
+Fri Jul 15 19:53:07 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -67,70 +67,79 @@ Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
  59. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|MUXRegisterFile:MUXRegister1
  60. Parameter Settings for User Entity Instance: Register_File:REGISTER_FILE_UNIT|MUXRegisterFile:MUXRegister2
  61. Parameter Settings for User Entity Instance: Multiplexer_2_to_1:MUX_DATA_OR_IMM_FOR_ALU
- 62. Parameter Settings for User Entity Instance: Register_Pipeline:IF_ID_PC
- 63. Parameter Settings for User Entity Instance: Register_Pipeline:IF_ID_Instr
- 64. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_PC
- 65. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_RD1
- 66. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_RD2
- 67. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_IMM
- 68. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_ALUOP
- 69. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_ALUSRC
- 70. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_MEMWR
- 71. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_MEMRD
- 72. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_BRANCH
- 73. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_JALR
- 74. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_REGW
- 75. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_MEWMREG
- 76. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_PC
- 77. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_ALU_RES
- 78. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_RD2
- 79. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_MEMWR
- 80. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_MEMRD
- 81. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_BRANCH
- 82. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_JALR
- 83. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_REGW
- 84. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_MEMREG
- 85. Parameter Settings for User Entity Instance: Register_Pipeline:MEM_WB_RDATA
- 86. Parameter Settings for User Entity Instance: Register_Pipeline:MEM_WB_ALU_RES
- 87. Parameter Settings for User Entity Instance: Register_Pipeline:MEM_WB_REGW
- 88. Parameter Settings for User Entity Instance: Register_Pipeline:MEM_WB_MEMREG
- 89. Parameter Settings for Inferred Entity Instance: Program_Memory:PROGRAM_MEMORY|altsyncram:rom_rtl_0
- 90. altsyncram Parameter Settings by Entity Instance
- 91. Port Connectivity Checks: "Register_Pipeline:MEM_WB_MEMREG"
- 92. Port Connectivity Checks: "Register_Pipeline:MEM_WB_REGW"
- 93. Port Connectivity Checks: "Register_Pipeline:MEM_WB_ALU_RES"
- 94. Port Connectivity Checks: "Register_Pipeline:MEM_WB_RDATA"
- 95. Port Connectivity Checks: "Register_Pipeline:EX_MEM_MEMREG"
- 96. Port Connectivity Checks: "Register_Pipeline:EX_MEM_REGW"
- 97. Port Connectivity Checks: "Register_Pipeline:EX_MEM_JALR"
- 98. Port Connectivity Checks: "Register_Pipeline:EX_MEM_BRANCH"
- 99. Port Connectivity Checks: "Register_Pipeline:EX_MEM_MEMRD"
-100. Port Connectivity Checks: "Register_Pipeline:EX_MEM_MEMWR"
-101. Port Connectivity Checks: "Register_Pipeline:EX_MEM_RD2"
-102. Port Connectivity Checks: "Register_Pipeline:EX_MEM_ALU_RES"
-103. Port Connectivity Checks: "Register_Pipeline:EX_MEM_PC"
-104. Port Connectivity Checks: "Register_Pipeline:ID_EX_MEWMREG"
-105. Port Connectivity Checks: "Register_Pipeline:ID_EX_REGW"
-106. Port Connectivity Checks: "Register_Pipeline:ID_EX_JALR"
-107. Port Connectivity Checks: "Register_Pipeline:ID_EX_BRANCH"
-108. Port Connectivity Checks: "Register_Pipeline:ID_EX_MEMRD"
-109. Port Connectivity Checks: "Register_Pipeline:ID_EX_MEMWR"
-110. Port Connectivity Checks: "Register_Pipeline:ID_EX_ALUSRC"
-111. Port Connectivity Checks: "Register_Pipeline:ID_EX_ALUOP"
-112. Port Connectivity Checks: "Register_Pipeline:ID_EX_IMM"
-113. Port Connectivity Checks: "Register_Pipeline:ID_EX_RD2"
-114. Port Connectivity Checks: "Register_Pipeline:ID_EX_RD1"
-115. Port Connectivity Checks: "Register_Pipeline:ID_EX_PC"
-116. Port Connectivity Checks: "Register_Pipeline:IF_ID_Instr"
-117. Port Connectivity Checks: "Register_Pipeline:IF_ID_PC"
-118. Port Connectivity Checks: "ALU:ALU_UNIT"
-119. Port Connectivity Checks: "Register_File:REGISTER_FILE_UNIT|Register:Register_zero"
-120. Port Connectivity Checks: "Branch_Control:Branch_Control_Unit"
-121. Port Connectivity Checks: "Multiplexer_2_to_1:MUX_JALR_OR_IMM"
-122. Port Connectivity Checks: "Adder_32_Bits:PC_PLUS_4"
-123. Post-Synthesis Netlist Statistics for Top Partition
-124. Elapsed Time Per Partition
-125. Analysis & Synthesis Messages
+ 62. Parameter Settings for User Entity Instance: Multiplexer_2_to_1:MUX_FWA_OR_A
+ 63. Parameter Settings for User Entity Instance: Multiplexer_2_to_1:MUX_FWB_OR_B
+ 64. Parameter Settings for User Entity Instance: Register_Pipeline:IF_ID_PC
+ 65. Parameter Settings for User Entity Instance: Register_Pipeline:IF_ID_Instr
+ 66. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_PC
+ 67. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_RS1
+ 68. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_RS2
+ 69. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_RD
+ 70. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_IMM
+ 71. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_ALUOP
+ 72. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_ALUSRC
+ 73. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_MEMWR
+ 74. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_MEMRD
+ 75. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_BRANCH
+ 76. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_JALR
+ 77. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_REGW
+ 78. Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_MEWMREG
+ 79. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_PC
+ 80. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_ALU_RES
+ 81. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_RD2
+ 82. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_RD
+ 83. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_MEMWR
+ 84. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_MEMRD
+ 85. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_BRANCH
+ 86. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_REGW
+ 87. Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_MEMREG
+ 88. Parameter Settings for User Entity Instance: Register_Pipeline:MEM_WB_RDATA
+ 89. Parameter Settings for User Entity Instance: Register_Pipeline:MEM_WB_ALU_RES
+ 90. Parameter Settings for User Entity Instance: Register_Pipeline:MEM_WB_RD
+ 91. Parameter Settings for User Entity Instance: Register_Pipeline:MEM_WB_REGW
+ 92. Parameter Settings for User Entity Instance: Register_Pipeline:MEM_WB_MEMREG
+ 93. Parameter Settings for Inferred Entity Instance: Program_Memory:PROGRAM_MEMORY|altsyncram:rom_rtl_0
+ 94. altsyncram Parameter Settings by Entity Instance
+ 95. Port Connectivity Checks: "Register_Pipeline:MEM_WB_MEMREG"
+ 96. Port Connectivity Checks: "Register_Pipeline:MEM_WB_REGW"
+ 97. Port Connectivity Checks: "Register_Pipeline:MEM_WB_RD"
+ 98. Port Connectivity Checks: "Register_Pipeline:MEM_WB_ALU_RES"
+ 99. Port Connectivity Checks: "Register_Pipeline:MEM_WB_RDATA"
+100. Port Connectivity Checks: "Register_Pipeline:EX_MEM_MEMREG"
+101. Port Connectivity Checks: "Register_Pipeline:EX_MEM_REGW"
+102. Port Connectivity Checks: "Register_Pipeline:EX_MEM_BRANCH"
+103. Port Connectivity Checks: "Register_Pipeline:EX_MEM_MEMRD"
+104. Port Connectivity Checks: "Register_Pipeline:EX_MEM_MEMWR"
+105. Port Connectivity Checks: "Register_Pipeline:EX_MEM_RD"
+106. Port Connectivity Checks: "Register_Pipeline:EX_MEM_RD2"
+107. Port Connectivity Checks: "Register_Pipeline:EX_MEM_ALU_RES"
+108. Port Connectivity Checks: "Register_Pipeline:EX_MEM_PC"
+109. Port Connectivity Checks: "Register_Pipeline:ID_EX_MEWMREG"
+110. Port Connectivity Checks: "Register_Pipeline:ID_EX_REGW"
+111. Port Connectivity Checks: "Register_Pipeline:ID_EX_JALR"
+112. Port Connectivity Checks: "Register_Pipeline:ID_EX_BRANCH"
+113. Port Connectivity Checks: "Register_Pipeline:ID_EX_MEMRD"
+114. Port Connectivity Checks: "Register_Pipeline:ID_EX_MEMWR"
+115. Port Connectivity Checks: "Register_Pipeline:ID_EX_ALUSRC"
+116. Port Connectivity Checks: "Register_Pipeline:ID_EX_ALUOP"
+117. Port Connectivity Checks: "Register_Pipeline:ID_EX_IMM"
+118. Port Connectivity Checks: "Register_Pipeline:ID_EX_RD"
+119. Port Connectivity Checks: "Register_Pipeline:ID_EX_RS2"
+120. Port Connectivity Checks: "Register_Pipeline:ID_EX_RS1"
+121. Port Connectivity Checks: "Register_Pipeline:ID_EX_PC"
+122. Port Connectivity Checks: "Register_Pipeline:IF_ID_Instr"
+123. Port Connectivity Checks: "Register_Pipeline:IF_ID_PC"
+124. Port Connectivity Checks: "Multiplexer_2_to_1:MUX_FWB_OR_B"
+125. Port Connectivity Checks: "Multiplexer_2_to_1:MUX_FWA_OR_A"
+126. Port Connectivity Checks: "Forwarding:FORWARDING_UNIT"
+127. Port Connectivity Checks: "ALU:ALU_UNIT"
+128. Port Connectivity Checks: "Register_File:REGISTER_FILE_UNIT|Register:Register_zero"
+129. Port Connectivity Checks: "Branch_Control:Branch_Control_Unit"
+130. Port Connectivity Checks: "Multiplexer_2_to_1:MUX_JALR_OR_IMM"
+131. Port Connectivity Checks: "Adder_32_Bits:PC_PLUS_4"
+132. Post-Synthesis Netlist Statistics for Top Partition
+133. Elapsed Time Per Partition
+134. Analysis & Synthesis Messages
 
 
 
@@ -157,15 +166,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jul  8 23:50:43 2022       ;
+; Analysis & Synthesis Status        ; Successful - Fri Jul 15 19:53:07 2022       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; RISC_V_Single_Cycle                         ;
 ; Top-level Entity Name              ; RISC_V_Single_Cycle                         ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 17,217                                      ;
-;     Total combinational functions  ; 7,992                                       ;
-;     Dedicated logic registers      ; 9,459                                       ;
-; Total registers                    ; 9459                                        ;
+; Total logic elements               ; 17,339                                      ;
+;     Total combinational functions  ; 8,105                                       ;
+;     Dedicated logic registers      ; 9,473                                       ;
+; Total registers                    ; 9473                                        ;
 ; Total pins                         ; 34                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 2,048                                       ;
@@ -278,8 +287,8 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 2            ;   0.3%      ;
 ;     Processor 3            ;   0.3%      ;
 ;     Processor 4            ;   0.3%      ;
-;     Processor 5            ;   0.2%      ;
-;     Processor 6            ;   0.2%      ;
+;     Processor 5            ;   0.3%      ;
+;     Processor 6            ;   0.3%      ;
 ;     Processor 7            ;   0.2%      ;
 ;     Processor 8            ;   0.2%      ;
 ;     Processors 9-16        ;   0.2%      ;
@@ -308,6 +317,8 @@ https://fpgasoftware.intel.com/eula.
 ; ../src/Branch_Control.v                                     ; yes             ; User Verilog HDL File                                 ; E:/RISCV_SC/RISC_V_SC-main/src/Branch_Control.v                                                       ;         ;
 ; ../src/Register_Pipeline.v                                  ; yes             ; User Verilog HDL File                                 ; E:/RISCV_SC/RISC_V_SC-main/src/Register_Pipeline.v                                                    ;         ;
 ; ../src/SP_Register.v                                        ; yes             ; User Verilog HDL File                                 ; E:/RISCV_SC/RISC_V_SC-main/src/SP_Register.v                                                          ;         ;
+; ../src/FWD.v                                                ; yes             ; User Verilog HDL File                                 ; E:/RISCV_SC/RISC_V_SC-main/src/FWD.v                                                                  ;         ;
+; ../src/HazardControl.v                                      ; yes             ; User Verilog HDL File                                 ; E:/RISCV_SC/RISC_V_SC-main/src/HazardControl.v                                                        ;         ;
 ; d:/documentos/iteso/verano2/arqui/risc_v_sc/src/text.dat    ; yes             ; Auto-Found Unspecified File                           ; d:/documentos/iteso/verano2/arqui/risc_v_sc/src/text.dat                                              ;         ;
 ; altsyncram.tdf                                              ; yes             ; Megafunction                                          ; e:/quartus/quartus/libraries/megafunctions/altsyncram.tdf                                             ;         ;
 ; stratix_ram_block.inc                                       ; yes             ; Megafunction                                          ; e:/quartus/quartus/libraries/megafunctions/stratix_ram_block.inc                                      ;         ;
@@ -328,20 +339,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 17,217    ;
+; Estimated Total logic elements              ; 17,339    ;
 ;                                             ;           ;
-; Total combinational functions               ; 7992      ;
+; Total combinational functions               ; 8105      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 7256      ;
-;     -- 3 input functions                    ; 584       ;
-;     -- <=2 input functions                  ; 152       ;
+;     -- 4 input functions                    ; 7399      ;
+;     -- 3 input functions                    ; 585       ;
+;     -- <=2 input functions                  ; 121       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 7931      ;
+;     -- normal mode                          ; 8044      ;
 ;     -- arithmetic mode                      ; 61        ;
 ;                                             ;           ;
-; Total registers                             ; 9459      ;
-;     -- Dedicated logic registers            ; 9459      ;
+; Total registers                             ; 9473      ;
+;     -- Dedicated logic registers            ; 9473      ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 34        ;
@@ -350,9 +361,9 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 9491      ;
-; Total fan-out                               ; 60792     ;
-; Average fan-out                             ; 3.46      ;
+; Maximum fan-out                             ; 9505      ;
+; Total fan-out                               ; 61347     ;
+; Average fan-out                             ; 3.47      ;
 +---------------------------------------------+-----------+
 
 
@@ -361,24 +372,27 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                    ; Entity Name           ; Library Name ;
 +-------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; |RISC_V_Single_Cycle                            ; 7992 (0)            ; 9459 (0)                  ; 2048        ; 0          ; 0            ; 0       ; 0         ; 34   ; 0            ; 0          ; |RISC_V_Single_Cycle                                                                                   ; RISC_V_Single_Cycle   ; work         ;
-;    |ALU:ALU_UNIT|                               ; 568 (568)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|ALU:ALU_UNIT                                                                      ; ALU                   ; work         ;
+; |RISC_V_Single_Cycle                            ; 8105 (0)            ; 9473 (0)                  ; 2048        ; 0          ; 0            ; 0       ; 0         ; 34   ; 0            ; 0          ; |RISC_V_Single_Cycle                                                                                   ; RISC_V_Single_Cycle   ; work         ;
+;    |ALU:ALU_UNIT|                               ; 610 (610)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|ALU:ALU_UNIT                                                                      ; ALU                   ; work         ;
 ;    |ALU_Control:ALU_CONTROL_UNIT|               ; 12 (12)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|ALU_Control:ALU_CONTROL_UNIT                                                      ; ALU_Control           ; work         ;
 ;    |Adder_32_Bits:PC_PLUS_4|                    ; 30 (30)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Adder_32_Bits:PC_PLUS_4                                                           ; Adder_32_Bits         ; work         ;
-;    |Branch_Control:Branch_Control_Unit|         ; 13 (13)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Branch_Control:Branch_Control_Unit                                                ; Branch_Control        ; work         ;
-;    |Control:CONTROL_UNIT|                       ; 18 (18)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Control:CONTROL_UNIT                                                              ; Control               ; work         ;
+;    |Branch_Control:Branch_Control_Unit|         ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Branch_Control:Branch_Control_Unit                                                ; Branch_Control        ; work         ;
+;    |Control:CONTROL_UNIT|                       ; 22 (22)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Control:CONTROL_UNIT                                                              ; Control               ; work         ;
 ;    |Data_Memory:Data_Memory_Unit|               ; 5728 (5728)         ; 8192 (8192)               ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Data_Memory:Data_Memory_Unit                                                      ; Data_Memory           ; work         ;
-;    |Immediate_Unit:IMM_UNIT|                    ; 90 (90)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Immediate_Unit:IMM_UNIT                                                           ; Immediate_Unit        ; work         ;
+;    |Forwarding:FORWARDING_UNIT|                 ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Forwarding:FORWARDING_UNIT                                                        ; Forwarding            ; work         ;
+;    |HazardControl:HAZARD_CONTROL_UNIT|          ; 15 (15)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|HazardControl:HAZARD_CONTROL_UNIT                                                 ; HazardControl         ; work         ;
+;    |Immediate_Unit:IMM_UNIT|                    ; 93 (93)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Immediate_Unit:IMM_UNIT                                                           ; Immediate_Unit        ; work         ;
 ;    |Multiplexer_2_to_1:MUX_ALU_OR_MEM_OUT|      ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Multiplexer_2_to_1:MUX_ALU_OR_MEM_OUT                                             ; Multiplexer_2_to_1    ; work         ;
-;    |Multiplexer_2_to_1:MUX_DATA_OR_IMM_FOR_ALU| ; 24 (24)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Multiplexer_2_to_1:MUX_DATA_OR_IMM_FOR_ALU                                        ; Multiplexer_2_to_1    ; work         ;
+;    |Multiplexer_2_to_1:MUX_DATA_OR_IMM_FOR_ALU| ; 30 (30)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Multiplexer_2_to_1:MUX_DATA_OR_IMM_FOR_ALU                                        ; Multiplexer_2_to_1    ; work         ;
+;    |Multiplexer_2_to_1:MUX_FWA_OR_A|            ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Multiplexer_2_to_1:MUX_FWA_OR_A                                                   ; Multiplexer_2_to_1    ; work         ;
 ;    |Multiplexer_2_to_1:MUX_JALR_OR_IMM|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Multiplexer_2_to_1:MUX_JALR_OR_IMM                                                ; Multiplexer_2_to_1    ; work         ;
 ;    |Multiplexer_2_to_1:MUX_PC4_OR_JMP|          ; 30 (30)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Multiplexer_2_to_1:MUX_PC4_OR_JMP                                                 ; Multiplexer_2_to_1    ; work         ;
 ;    |PC_Register:PC|                             ; 1 (1)               ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|PC_Register:PC                                                                    ; PC_Register           ; work         ;
-;    |Program_Memory:PROGRAM_MEMORY|              ; 25 (25)             ; 1 (1)                     ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Program_Memory:PROGRAM_MEMORY                                                     ; Program_Memory        ; work         ;
+;    |Program_Memory:PROGRAM_MEMORY|              ; 29 (29)             ; 1 (1)                     ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Program_Memory:PROGRAM_MEMORY                                                     ; Program_Memory        ; work         ;
 ;       |altsyncram:rom_rtl_0|                    ; 0 (0)               ; 0 (0)                     ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Program_Memory:PROGRAM_MEMORY|altsyncram:rom_rtl_0                                ; altsyncram            ; work         ;
 ;          |altsyncram_4781:auto_generated|       ; 0 (0)               ; 0 (0)                     ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Program_Memory:PROGRAM_MEMORY|altsyncram:rom_rtl_0|altsyncram_4781:auto_generated ; altsyncram_4781       ; work         ;
-;    |Register_File:REGISTER_FILE_UNIT|           ; 1361 (0)            ; 992 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_File:REGISTER_FILE_UNIT                                                  ; Register_File         ; work         ;
-;       |Decoder_Register_File:DECODER_REG_FILE|  ; 43 (43)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_File:REGISTER_FILE_UNIT|Decoder_Register_File:DECODER_REG_FILE           ; Decoder_Register_File ; work         ;
+;    |Register_File:REGISTER_FILE_UNIT|           ; 1357 (0)            ; 992 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_File:REGISTER_FILE_UNIT                                                  ; Register_File         ; work         ;
+;       |Decoder_Register_File:DECODER_REG_FILE|  ; 39 (39)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_File:REGISTER_FILE_UNIT|Decoder_Register_File:DECODER_REG_FILE           ; Decoder_Register_File ; work         ;
 ;       |MUXRegisterFile:MUXRegister1|            ; 645 (645)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_File:REGISTER_FILE_UNIT|MUXRegisterFile:MUXRegister1                     ; MUXRegisterFile       ; work         ;
 ;       |MUXRegisterFile:MUXRegister2|            ; 672 (672)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_File:REGISTER_FILE_UNIT|MUXRegisterFile:MUXRegister2                     ; MUXRegisterFile       ; work         ;
 ;       |Register:Register_a0|                    ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_File:REGISTER_FILE_UNIT|Register:Register_a0                             ; Register              ; work         ;
@@ -412,29 +426,32 @@ https://fpgasoftware.intel.com/eula.
 ;       |Register:Register_t6|                    ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_File:REGISTER_FILE_UNIT|Register:Register_t6                             ; Register              ; work         ;
 ;       |Register:Register_tp|                    ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_File:REGISTER_FILE_UNIT|Register:Register_tp                             ; Register              ; work         ;
 ;       |SP_Register:Register_sp|                 ; 1 (1)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_File:REGISTER_FILE_UNIT|SP_Register:Register_sp                          ; SP_Register           ; work         ;
-;    |Register_Pipeline:EX_MEM_ALU_RES|           ; 48 (48)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_ALU_RES                                                  ; Register_Pipeline     ; work         ;
+;    |Register_Pipeline:EX_MEM_ALU_RES|           ; 54 (54)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_ALU_RES                                                  ; Register_Pipeline     ; work         ;
 ;    |Register_Pipeline:EX_MEM_BRANCH|            ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_BRANCH                                                   ; Register_Pipeline     ; work         ;
-;    |Register_Pipeline:EX_MEM_JALR|              ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_JALR                                                     ; Register_Pipeline     ; work         ;
-;    |Register_Pipeline:EX_MEM_MEMREG|            ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_MEMREG                                                   ; Register_Pipeline     ; work         ;
+;    |Register_Pipeline:EX_MEM_MEMRD|             ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_MEMRD                                                    ; Register_Pipeline     ; work         ;
 ;    |Register_Pipeline:EX_MEM_MEMWR|             ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_MEMWR                                                    ; Register_Pipeline     ; work         ;
 ;    |Register_Pipeline:EX_MEM_PC|                ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_PC                                                       ; Register_Pipeline     ; work         ;
 ;    |Register_Pipeline:EX_MEM_RD2|               ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_RD2                                                      ; Register_Pipeline     ; work         ;
+;    |Register_Pipeline:EX_MEM_RD|                ; 0 (0)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_RD                                                       ; Register_Pipeline     ; work         ;
 ;    |Register_Pipeline:EX_MEM_REGW|              ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_REGW                                                     ; Register_Pipeline     ; work         ;
 ;    |Register_Pipeline:ID_EX_ALUOP|              ; 0 (0)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_ALUOP                                                     ; Register_Pipeline     ; work         ;
 ;    |Register_Pipeline:ID_EX_ALUSRC|             ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_ALUSRC                                                    ; Register_Pipeline     ; work         ;
 ;    |Register_Pipeline:ID_EX_BRANCH|             ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_BRANCH                                                    ; Register_Pipeline     ; work         ;
-;    |Register_Pipeline:ID_EX_IMM|                ; 5 (5)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_IMM                                                       ; Register_Pipeline     ; work         ;
+;    |Register_Pipeline:ID_EX_IMM|                ; 6 (6)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_IMM                                                       ; Register_Pipeline     ; work         ;
 ;    |Register_Pipeline:ID_EX_JALR|               ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_JALR                                                      ; Register_Pipeline     ; work         ;
+;    |Register_Pipeline:ID_EX_MEMRD|              ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_MEMRD                                                     ; Register_Pipeline     ; work         ;
 ;    |Register_Pipeline:ID_EX_MEMWR|              ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_MEMWR                                                     ; Register_Pipeline     ; work         ;
-;    |Register_Pipeline:ID_EX_MEWMREG|            ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_MEWMREG                                                   ; Register_Pipeline     ; work         ;
 ;    |Register_Pipeline:ID_EX_PC|                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_PC                                                        ; Register_Pipeline     ; work         ;
-;    |Register_Pipeline:ID_EX_RD1|                ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_RD1                                                       ; Register_Pipeline     ; work         ;
-;    |Register_Pipeline:ID_EX_RD2|                ; 6 (6)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_RD2                                                       ; Register_Pipeline     ; work         ;
+;    |Register_Pipeline:ID_EX_RD|                 ; 0 (0)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_RD                                                        ; Register_Pipeline     ; work         ;
 ;    |Register_Pipeline:ID_EX_REGW|               ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_REGW                                                      ; Register_Pipeline     ; work         ;
+;    |Register_Pipeline:ID_EX_RS1|                ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_RS1                                                       ; Register_Pipeline     ; work         ;
+;    |Register_Pipeline:ID_EX_RS2|                ; 6 (6)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_RS2                                                       ; Register_Pipeline     ; work         ;
+;    |Register_Pipeline:IF_ID_Instr|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:IF_ID_Instr                                                     ; Register_Pipeline     ; work         ;
 ;    |Register_Pipeline:IF_ID_PC|                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:IF_ID_PC                                                        ; Register_Pipeline     ; work         ;
 ;    |Register_Pipeline:MEM_WB_ALU_RES|           ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:MEM_WB_ALU_RES                                                  ; Register_Pipeline     ; work         ;
 ;    |Register_Pipeline:MEM_WB_MEMREG|            ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:MEM_WB_MEMREG                                                   ; Register_Pipeline     ; work         ;
 ;    |Register_Pipeline:MEM_WB_RDATA|             ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:MEM_WB_RDATA                                                    ; Register_Pipeline     ; work         ;
+;    |Register_Pipeline:MEM_WB_RD|                ; 0 (0)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:MEM_WB_RD                                                       ; Register_Pipeline     ; work         ;
 ;    |Register_Pipeline:MEM_WB_REGW|              ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RISC_V_Single_Cycle|Register_Pipeline:MEM_WB_REGW                                                     ; Register_Pipeline     ; work         ;
 +-------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -449,80 +466,80 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+-------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                    ;
-+---------------------------------------------------------------------------+-----------------------------------------------------------+
-; Register name                                                             ; Reason for Removal                                        ;
-+---------------------------------------------------------------------------+-----------------------------------------------------------+
-; Register_Pipeline:EX_MEM_PC|DataOutput[1..31]                             ; Stuck at GND due to stuck port data_in                    ;
-; Register_File:REGISTER_FILE_UNIT|Register:Register_zero|DataOutput[0..31] ; Stuck at GND due to stuck port data_in                    ;
-; Register_Pipeline:ID_EX_PC|DataOutput[31]                                 ; Lost fanout                                               ;
-; Register_Pipeline:IF_ID_PC|DataOutput[31]                                 ; Lost fanout                                               ;
-; Register_Pipeline:ID_EX_PC|DataOutput[30]                                 ; Lost fanout                                               ;
-; Register_Pipeline:IF_ID_PC|DataOutput[30]                                 ; Lost fanout                                               ;
-; Register_Pipeline:ID_EX_PC|DataOutput[29]                                 ; Lost fanout                                               ;
-; Register_Pipeline:IF_ID_PC|DataOutput[29]                                 ; Lost fanout                                               ;
-; Register_Pipeline:ID_EX_PC|DataOutput[28]                                 ; Lost fanout                                               ;
-; Register_Pipeline:IF_ID_PC|DataOutput[28]                                 ; Lost fanout                                               ;
-; Register_Pipeline:ID_EX_PC|DataOutput[27]                                 ; Lost fanout                                               ;
-; Register_Pipeline:IF_ID_PC|DataOutput[27]                                 ; Lost fanout                                               ;
-; Register_Pipeline:ID_EX_PC|DataOutput[26]                                 ; Lost fanout                                               ;
-; Register_Pipeline:IF_ID_PC|DataOutput[26]                                 ; Lost fanout                                               ;
-; Register_Pipeline:ID_EX_PC|DataOutput[25]                                 ; Lost fanout                                               ;
-; Register_Pipeline:IF_ID_PC|DataOutput[25]                                 ; Lost fanout                                               ;
-; Register_Pipeline:ID_EX_PC|DataOutput[24]                                 ; Lost fanout                                               ;
-; Register_Pipeline:IF_ID_PC|DataOutput[24]                                 ; Lost fanout                                               ;
-; Register_Pipeline:ID_EX_PC|DataOutput[23]                                 ; Lost fanout                                               ;
-; Register_Pipeline:IF_ID_PC|DataOutput[23]                                 ; Lost fanout                                               ;
-; Register_Pipeline:ID_EX_PC|DataOutput[22]                                 ; Lost fanout                                               ;
-; Register_Pipeline:IF_ID_PC|DataOutput[22]                                 ; Lost fanout                                               ;
-; Register_Pipeline:ID_EX_PC|DataOutput[21]                                 ; Lost fanout                                               ;
-; Register_Pipeline:IF_ID_PC|DataOutput[21]                                 ; Lost fanout                                               ;
-; Register_Pipeline:ID_EX_PC|DataOutput[20]                                 ; Lost fanout                                               ;
-; Register_Pipeline:IF_ID_PC|DataOutput[20]                                 ; Lost fanout                                               ;
-; Register_Pipeline:ID_EX_PC|DataOutput[19]                                 ; Lost fanout                                               ;
-; Register_Pipeline:IF_ID_PC|DataOutput[19]                                 ; Lost fanout                                               ;
-; Register_Pipeline:ID_EX_PC|DataOutput[18]                                 ; Lost fanout                                               ;
-; Register_Pipeline:IF_ID_PC|DataOutput[18]                                 ; Lost fanout                                               ;
-; Register_Pipeline:ID_EX_PC|DataOutput[17]                                 ; Lost fanout                                               ;
-; Register_Pipeline:IF_ID_PC|DataOutput[17]                                 ; Lost fanout                                               ;
-; Register_Pipeline:ID_EX_PC|DataOutput[16]                                 ; Lost fanout                                               ;
-; Register_Pipeline:IF_ID_PC|DataOutput[16]                                 ; Lost fanout                                               ;
-; Register_Pipeline:ID_EX_PC|DataOutput[15]                                 ; Lost fanout                                               ;
-; Register_Pipeline:IF_ID_PC|DataOutput[15]                                 ; Lost fanout                                               ;
-; Register_Pipeline:ID_EX_PC|DataOutput[14]                                 ; Lost fanout                                               ;
-; Register_Pipeline:IF_ID_PC|DataOutput[14]                                 ; Lost fanout                                               ;
-; Register_Pipeline:ID_EX_PC|DataOutput[13]                                 ; Lost fanout                                               ;
-; Register_Pipeline:IF_ID_PC|DataOutput[13]                                 ; Lost fanout                                               ;
-; Register_Pipeline:ID_EX_PC|DataOutput[12]                                 ; Lost fanout                                               ;
-; Register_Pipeline:IF_ID_PC|DataOutput[12]                                 ; Lost fanout                                               ;
-; Register_Pipeline:ID_EX_PC|DataOutput[11]                                 ; Lost fanout                                               ;
-; Register_Pipeline:IF_ID_PC|DataOutput[11]                                 ; Lost fanout                                               ;
-; Register_Pipeline:ID_EX_PC|DataOutput[10]                                 ; Lost fanout                                               ;
-; Register_Pipeline:IF_ID_PC|DataOutput[10]                                 ; Lost fanout                                               ;
-; Register_Pipeline:ID_EX_PC|DataOutput[9]                                  ; Lost fanout                                               ;
-; Register_Pipeline:IF_ID_PC|DataOutput[9]                                  ; Lost fanout                                               ;
-; Register_Pipeline:ID_EX_PC|DataOutput[8]                                  ; Lost fanout                                               ;
-; Register_Pipeline:IF_ID_PC|DataOutput[8]                                  ; Lost fanout                                               ;
-; Register_Pipeline:ID_EX_PC|DataOutput[7]                                  ; Lost fanout                                               ;
-; Register_Pipeline:IF_ID_PC|DataOutput[7]                                  ; Lost fanout                                               ;
-; Register_Pipeline:ID_EX_PC|DataOutput[6]                                  ; Lost fanout                                               ;
-; Register_Pipeline:IF_ID_PC|DataOutput[6]                                  ; Lost fanout                                               ;
-; Register_Pipeline:ID_EX_PC|DataOutput[5]                                  ; Lost fanout                                               ;
-; Register_Pipeline:IF_ID_PC|DataOutput[5]                                  ; Lost fanout                                               ;
-; Register_Pipeline:ID_EX_PC|DataOutput[4]                                  ; Lost fanout                                               ;
-; Register_Pipeline:IF_ID_PC|DataOutput[4]                                  ; Lost fanout                                               ;
-; Register_Pipeline:ID_EX_PC|DataOutput[3]                                  ; Lost fanout                                               ;
-; Register_Pipeline:IF_ID_PC|DataOutput[3]                                  ; Lost fanout                                               ;
-; Register_Pipeline:ID_EX_PC|DataOutput[2]                                  ; Lost fanout                                               ;
-; Register_Pipeline:IF_ID_PC|DataOutput[2]                                  ; Lost fanout                                               ;
-; Register_Pipeline:ID_EX_PC|DataOutput[1]                                  ; Lost fanout                                               ;
-; Register_Pipeline:IF_ID_PC|DataOutput[1]                                  ; Lost fanout                                               ;
-; Register_Pipeline:ID_EX_MEMRD|DataOutput[0]                               ; Merged with Register_Pipeline:ID_EX_MEWMREG|DataOutput[0] ;
-; Register_Pipeline:EX_MEM_MEMRD|DataOutput[0]                              ; Merged with Register_Pipeline:EX_MEM_MEMREG|DataOutput[0] ;
-; PC_Register:PC|PC_Value[1]                                                ; Stuck at GND due to stuck port data_in                    ;
-; Total Number of Removed Registers = 128                                   ;                                                           ;
-+---------------------------------------------------------------------------+-----------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                   ;
++---------------------------------------------------------------------------+----------------------------------------------------------+
+; Register name                                                             ; Reason for Removal                                       ;
++---------------------------------------------------------------------------+----------------------------------------------------------+
+; Register_Pipeline:EX_MEM_PC|DataOutput[1..31]                             ; Stuck at GND due to stuck port data_in                   ;
+; Register_File:REGISTER_FILE_UNIT|Register:Register_zero|DataOutput[0..31] ; Stuck at GND due to stuck port data_in                   ;
+; Register_Pipeline:ID_EX_PC|DataOutput[31]                                 ; Lost fanout                                              ;
+; Register_Pipeline:IF_ID_PC|DataOutput[31]                                 ; Lost fanout                                              ;
+; Register_Pipeline:ID_EX_PC|DataOutput[30]                                 ; Lost fanout                                              ;
+; Register_Pipeline:IF_ID_PC|DataOutput[30]                                 ; Lost fanout                                              ;
+; Register_Pipeline:ID_EX_PC|DataOutput[29]                                 ; Lost fanout                                              ;
+; Register_Pipeline:IF_ID_PC|DataOutput[29]                                 ; Lost fanout                                              ;
+; Register_Pipeline:ID_EX_PC|DataOutput[28]                                 ; Lost fanout                                              ;
+; Register_Pipeline:IF_ID_PC|DataOutput[28]                                 ; Lost fanout                                              ;
+; Register_Pipeline:ID_EX_PC|DataOutput[27]                                 ; Lost fanout                                              ;
+; Register_Pipeline:IF_ID_PC|DataOutput[27]                                 ; Lost fanout                                              ;
+; Register_Pipeline:ID_EX_PC|DataOutput[26]                                 ; Lost fanout                                              ;
+; Register_Pipeline:IF_ID_PC|DataOutput[26]                                 ; Lost fanout                                              ;
+; Register_Pipeline:ID_EX_PC|DataOutput[25]                                 ; Lost fanout                                              ;
+; Register_Pipeline:IF_ID_PC|DataOutput[25]                                 ; Lost fanout                                              ;
+; Register_Pipeline:ID_EX_PC|DataOutput[24]                                 ; Lost fanout                                              ;
+; Register_Pipeline:IF_ID_PC|DataOutput[24]                                 ; Lost fanout                                              ;
+; Register_Pipeline:ID_EX_PC|DataOutput[23]                                 ; Lost fanout                                              ;
+; Register_Pipeline:IF_ID_PC|DataOutput[23]                                 ; Lost fanout                                              ;
+; Register_Pipeline:ID_EX_PC|DataOutput[22]                                 ; Lost fanout                                              ;
+; Register_Pipeline:IF_ID_PC|DataOutput[22]                                 ; Lost fanout                                              ;
+; Register_Pipeline:ID_EX_PC|DataOutput[21]                                 ; Lost fanout                                              ;
+; Register_Pipeline:IF_ID_PC|DataOutput[21]                                 ; Lost fanout                                              ;
+; Register_Pipeline:ID_EX_PC|DataOutput[20]                                 ; Lost fanout                                              ;
+; Register_Pipeline:IF_ID_PC|DataOutput[20]                                 ; Lost fanout                                              ;
+; Register_Pipeline:ID_EX_PC|DataOutput[19]                                 ; Lost fanout                                              ;
+; Register_Pipeline:IF_ID_PC|DataOutput[19]                                 ; Lost fanout                                              ;
+; Register_Pipeline:ID_EX_PC|DataOutput[18]                                 ; Lost fanout                                              ;
+; Register_Pipeline:IF_ID_PC|DataOutput[18]                                 ; Lost fanout                                              ;
+; Register_Pipeline:ID_EX_PC|DataOutput[17]                                 ; Lost fanout                                              ;
+; Register_Pipeline:IF_ID_PC|DataOutput[17]                                 ; Lost fanout                                              ;
+; Register_Pipeline:ID_EX_PC|DataOutput[16]                                 ; Lost fanout                                              ;
+; Register_Pipeline:IF_ID_PC|DataOutput[16]                                 ; Lost fanout                                              ;
+; Register_Pipeline:ID_EX_PC|DataOutput[15]                                 ; Lost fanout                                              ;
+; Register_Pipeline:IF_ID_PC|DataOutput[15]                                 ; Lost fanout                                              ;
+; Register_Pipeline:ID_EX_PC|DataOutput[14]                                 ; Lost fanout                                              ;
+; Register_Pipeline:IF_ID_PC|DataOutput[14]                                 ; Lost fanout                                              ;
+; Register_Pipeline:ID_EX_PC|DataOutput[13]                                 ; Lost fanout                                              ;
+; Register_Pipeline:IF_ID_PC|DataOutput[13]                                 ; Lost fanout                                              ;
+; Register_Pipeline:ID_EX_PC|DataOutput[12]                                 ; Lost fanout                                              ;
+; Register_Pipeline:IF_ID_PC|DataOutput[12]                                 ; Lost fanout                                              ;
+; Register_Pipeline:ID_EX_PC|DataOutput[11]                                 ; Lost fanout                                              ;
+; Register_Pipeline:IF_ID_PC|DataOutput[11]                                 ; Lost fanout                                              ;
+; Register_Pipeline:ID_EX_PC|DataOutput[10]                                 ; Lost fanout                                              ;
+; Register_Pipeline:IF_ID_PC|DataOutput[10]                                 ; Lost fanout                                              ;
+; Register_Pipeline:ID_EX_PC|DataOutput[9]                                  ; Lost fanout                                              ;
+; Register_Pipeline:IF_ID_PC|DataOutput[9]                                  ; Lost fanout                                              ;
+; Register_Pipeline:ID_EX_PC|DataOutput[8]                                  ; Lost fanout                                              ;
+; Register_Pipeline:IF_ID_PC|DataOutput[8]                                  ; Lost fanout                                              ;
+; Register_Pipeline:ID_EX_PC|DataOutput[7]                                  ; Lost fanout                                              ;
+; Register_Pipeline:IF_ID_PC|DataOutput[7]                                  ; Lost fanout                                              ;
+; Register_Pipeline:ID_EX_PC|DataOutput[6]                                  ; Lost fanout                                              ;
+; Register_Pipeline:IF_ID_PC|DataOutput[6]                                  ; Lost fanout                                              ;
+; Register_Pipeline:ID_EX_PC|DataOutput[5]                                  ; Lost fanout                                              ;
+; Register_Pipeline:IF_ID_PC|DataOutput[5]                                  ; Lost fanout                                              ;
+; Register_Pipeline:ID_EX_PC|DataOutput[4]                                  ; Lost fanout                                              ;
+; Register_Pipeline:IF_ID_PC|DataOutput[4]                                  ; Lost fanout                                              ;
+; Register_Pipeline:ID_EX_PC|DataOutput[3]                                  ; Lost fanout                                              ;
+; Register_Pipeline:IF_ID_PC|DataOutput[3]                                  ; Lost fanout                                              ;
+; Register_Pipeline:ID_EX_PC|DataOutput[2]                                  ; Lost fanout                                              ;
+; Register_Pipeline:IF_ID_PC|DataOutput[2]                                  ; Lost fanout                                              ;
+; Register_Pipeline:ID_EX_PC|DataOutput[1]                                  ; Lost fanout                                              ;
+; Register_Pipeline:IF_ID_PC|DataOutput[1]                                  ; Lost fanout                                              ;
+; Register_Pipeline:EX_MEM_MEMREG|DataOutput[0]                             ; Merged with Register_Pipeline:EX_MEM_MEMRD|DataOutput[0] ;
+; Register_Pipeline:ID_EX_MEWMREG|DataOutput[0]                             ; Merged with Register_Pipeline:ID_EX_MEMRD|DataOutput[0]  ;
+; PC_Register:PC|PC_Value[1]                                                ; Stuck at GND due to stuck port data_in                   ;
+; Total Number of Removed Registers = 128                                   ;                                                          ;
++---------------------------------------------------------------------------+----------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------+
@@ -571,10 +588,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 9459  ;
+; Total registers                              ; 9473  ;
 ; Number of registers using Synchronous Clear  ; 40    ;
 ; Number of registers using Synchronous Load   ; 8     ;
-; Number of registers using Asynchronous Clear ; 1267  ;
+; Number of registers using Asynchronous Clear ; 1281  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 9184  ;
 ; Number of registers using Preset             ; 0     ;
@@ -606,22 +623,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
-; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_IMM|DataOutput[22]                          ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_RD2|DataOutput[1]                           ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_IMM|DataOutput[20]                          ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_RS2|DataOutput[31]                          ;
 ; 8:1                ; 6 bits    ; 30 LEs        ; 18 LEs               ; 12 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_IMM|DataOutput[26]                          ;
-; 9:1                ; 8 bits    ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_IMM|DataOutput[12]                          ;
+; 9:1                ; 8 bits    ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_IMM|DataOutput[14]                          ;
 ; 13:1               ; 3 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:ID_EX_IMM|DataOutput[2]                           ;
-; 19:1               ; 8 bits    ; 96 LEs        ; 56 LEs               ; 40 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_ALU_RES|DataOutput[10]                     ;
+; 19:1               ; 8 bits    ; 96 LEs        ; 56 LEs               ; 40 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_ALU_RES|DataOutput[15]                     ;
 ; 19:1               ; 8 bits    ; 96 LEs        ; 56 LEs               ; 40 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_ALU_RES|DataOutput[19]                     ;
-; 20:1               ; 4 bits    ; 52 LEs        ; 32 LEs               ; 20 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_ALU_RES|DataOutput[7]                      ;
+; 20:1               ; 4 bits    ; 52 LEs        ; 32 LEs               ; 20 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_ALU_RES|DataOutput[4]                      ;
 ; 20:1               ; 4 bits    ; 52 LEs        ; 32 LEs               ; 20 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_ALU_RES|DataOutput[27]                     ;
-; 21:1               ; 2 bits    ; 28 LEs        ; 18 LEs               ; 10 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_ALU_RES|DataOutput[2]                      ;
+; 21:1               ; 2 bits    ; 28 LEs        ; 18 LEs               ; 10 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_ALU_RES|DataOutput[3]                      ;
 ; 21:1               ; 2 bits    ; 28 LEs        ; 18 LEs               ; 10 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_ALU_RES|DataOutput[29]                     ;
-; 22:1               ; 2 bits    ; 28 LEs        ; 18 LEs               ; 10 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_ALU_RES|DataOutput[31]                     ;
+; 22:1               ; 2 bits    ; 28 LEs        ; 18 LEs               ; 10 LEs                 ; Yes        ; |RISC_V_Single_Cycle|Register_Pipeline:EX_MEM_ALU_RES|DataOutput[30]                     ;
+; 3:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |RISC_V_Single_Cycle|Multiplexer_2_to_1:MUX_DATA_OR_IMM_FOR_ALU|Mux_Output_o[24]         ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |RISC_V_Single_Cycle|Immediate_Unit:IMM_UNIT|Selector25                                  ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |RISC_V_Single_Cycle|Immediate_Unit:IMM_UNIT|Selector25                                  ;
 ; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; No         ; |RISC_V_Single_Cycle|ALU:ALU_UNIT|Add0                                                   ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 640 LEs              ; 32 LEs                 ; No         ; |RISC_V_Single_Cycle|Register_File:REGISTER_FILE_UNIT|MUXRegisterFile:MUXRegister1|Mux23 ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 640 LEs              ; 32 LEs                 ; No         ; |RISC_V_Single_Cycle|Register_File:REGISTER_FILE_UNIT|MUXRegisterFile:MUXRegister1|Mux19 ;
 ; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |RISC_V_Single_Cycle|ALU:ALU_UNIT|Add0                                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
 
@@ -1098,6 +1116,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Multiplexer_2_to_1:MUX_FWA_OR_A ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; NBits          ; 32    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Multiplexer_2_to_1:MUX_FWB_OR_B ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; NBits          ; 32    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: Register_Pipeline:IF_ID_PC ;
 +----------------+-------+------------------------------------------------+
@@ -1129,7 +1167,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_RD1 ;
+; Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_RS1 ;
 +----------------+-------+-------------------------------------------------+
 ; Parameter Name ; Value ; Type                                            ;
 +----------------+-------+-------------------------------------------------+
@@ -1139,12 +1177,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_RD2 ;
+; Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_RS2 ;
 +----------------+-------+-------------------------------------------------+
 ; Parameter Name ; Value ; Type                                            ;
 +----------------+-------+-------------------------------------------------+
 ; N              ; 32    ; Signed Integer                                  ;
 +----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register_Pipeline:ID_EX_RD ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; N              ; 32    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1163,7 +1211,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------------+
 ; Parameter Name ; Value ; Type                                              ;
 +----------------+-------+---------------------------------------------------+
-; N              ; 32    ; Signed Integer                                    ;
+; N              ; 3     ; Signed Integer                                    ;
 +----------------+-------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1173,7 +1221,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------------------------------------------------+
 ; Parameter Name ; Value ; Type                                               ;
 +----------------+-------+----------------------------------------------------+
-; N              ; 32    ; Signed Integer                                     ;
+; N              ; 1     ; Signed Integer                                     ;
 +----------------+-------+----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1183,7 +1231,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------------+
 ; Parameter Name ; Value ; Type                                              ;
 +----------------+-------+---------------------------------------------------+
-; N              ; 32    ; Signed Integer                                    ;
+; N              ; 1     ; Signed Integer                                    ;
 +----------------+-------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1193,7 +1241,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------------+
 ; Parameter Name ; Value ; Type                                              ;
 +----------------+-------+---------------------------------------------------+
-; N              ; 32    ; Signed Integer                                    ;
+; N              ; 1     ; Signed Integer                                    ;
 +----------------+-------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1203,7 +1251,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------------------------------------------------+
 ; Parameter Name ; Value ; Type                                               ;
 +----------------+-------+----------------------------------------------------+
-; N              ; 32    ; Signed Integer                                     ;
+; N              ; 1     ; Signed Integer                                     ;
 +----------------+-------+----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1213,7 +1261,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+--------------------------------------------------+
 ; Parameter Name ; Value ; Type                                             ;
 +----------------+-------+--------------------------------------------------+
-; N              ; 32    ; Signed Integer                                   ;
+; N              ; 1     ; Signed Integer                                   ;
 +----------------+-------+--------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1223,7 +1271,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+--------------------------------------------------+
 ; Parameter Name ; Value ; Type                                             ;
 +----------------+-------+--------------------------------------------------+
-; N              ; 32    ; Signed Integer                                   ;
+; N              ; 1     ; Signed Integer                                   ;
 +----------------+-------+--------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1233,7 +1281,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-----------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                ;
 +----------------+-------+-----------------------------------------------------+
-; N              ; 32    ; Signed Integer                                      ;
+; N              ; 1     ; Signed Integer                                      ;
 +----------------+-------+-----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1268,12 +1316,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_RD ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; N              ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_MEMWR ;
 +----------------+-------+----------------------------------------------------+
 ; Parameter Name ; Value ; Type                                               ;
 +----------------+-------+----------------------------------------------------+
-; N              ; 32    ; Signed Integer                                     ;
+; N              ; 1     ; Signed Integer                                     ;
 +----------------+-------+----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1283,7 +1341,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------------------------------------------------+
 ; Parameter Name ; Value ; Type                                               ;
 +----------------+-------+----------------------------------------------------+
-; N              ; 32    ; Signed Integer                                     ;
+; N              ; 1     ; Signed Integer                                     ;
 +----------------+-------+----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1293,18 +1351,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-----------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                ;
 +----------------+-------+-----------------------------------------------------+
-; N              ; 32    ; Signed Integer                                      ;
+; N              ; 1     ; Signed Integer                                      ;
 +----------------+-------+-----------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Register_Pipeline:EX_MEM_JALR ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; N              ; 32    ; Signed Integer                                    ;
-+----------------+-------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1313,7 +1361,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------------+
 ; Parameter Name ; Value ; Type                                              ;
 +----------------+-------+---------------------------------------------------+
-; N              ; 32    ; Signed Integer                                    ;
+; N              ; 1     ; Signed Integer                                    ;
 +----------------+-------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1323,7 +1371,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-----------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                ;
 +----------------+-------+-----------------------------------------------------+
-; N              ; 32    ; Signed Integer                                      ;
+; N              ; 1     ; Signed Integer                                      ;
 +----------------+-------+-----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1348,12 +1396,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register_Pipeline:MEM_WB_RD ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; N              ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +----------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: Register_Pipeline:MEM_WB_REGW ;
 +----------------+-------+---------------------------------------------------+
 ; Parameter Name ; Value ; Type                                              ;
 +----------------+-------+---------------------------------------------------+
-; N              ; 32    ; Signed Integer                                    ;
+; N              ; 1     ; Signed Integer                                    ;
 +----------------+-------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1363,7 +1421,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-----------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                ;
 +----------------+-------+-----------------------------------------------------+
-; N              ; 32    ; Signed Integer                                      ;
+; N              ; 1     ; Signed Integer                                      ;
 +----------------+-------+-----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1449,25 +1507,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+----------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Register_Pipeline:MEM_WB_MEMREG"                                                                                                                          ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                                                                                             ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; enable     ; Input  ; Info     ; Stuck at VCC                                                                                                                                        ;
-; DataInput  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "DataInput[31..1]" will be connected to GND. ;
-; DataOutput ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "DataOutput[31..1]" have no fanouts                     ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "Register_Pipeline:MEM_WB_MEMREG" ;
++--------+-------+----------+---------------------------------+
+; Port   ; Type  ; Severity ; Details                         ;
++--------+-------+----------+---------------------------------+
+; flush  ; Input ; Info     ; Stuck at GND                    ;
+; enable ; Input ; Info     ; Stuck at VCC                    ;
++--------+-------+----------+---------------------------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "Register_Pipeline:MEM_WB_REGW" ;
++--------+-------+----------+-------------------------------+
+; Port   ; Type  ; Severity ; Details                       ;
++--------+-------+----------+-------------------------------+
+; flush  ; Input ; Info     ; Stuck at GND                  ;
+; enable ; Input ; Info     ; Stuck at VCC                  ;
++--------+-------+----------+-------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Register_Pipeline:MEM_WB_REGW"                                                                                                                            ;
+; Port Connectivity Checks: "Register_Pipeline:MEM_WB_RD"                                                                                                                              ;
 +------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port       ; Type   ; Severity ; Details                                                                                                                                             ;
 +------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; flush      ; Input  ; Info     ; Stuck at GND                                                                                                                                        ;
 ; enable     ; Input  ; Info     ; Stuck at VCC                                                                                                                                        ;
-; DataInput  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "DataInput[31..1]" will be connected to GND. ;
-; DataOutput ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "DataOutput[31..1]" have no fanouts                     ;
+; DataInput  ; Input  ; Warning  ; Input port expression (5 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "DataInput[31..5]" will be connected to GND. ;
+; DataOutput ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (5 bits) it drives; bit(s) "DataOutput[31..5]" have no fanouts                     ;
 +------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -1476,6 +1544,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+----------------------------------+
 ; Port   ; Type  ; Severity ; Details                          ;
 +--------+-------+----------+----------------------------------+
+; flush  ; Input ; Info     ; Stuck at GND                     ;
 ; enable ; Input ; Info     ; Stuck at VCC                     ;
 +--------+-------+----------+----------------------------------+
 
@@ -1485,73 +1554,70 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+--------------------------------+
 ; Port   ; Type  ; Severity ; Details                        ;
 +--------+-------+----------+--------------------------------+
+; flush  ; Input ; Info     ; Stuck at GND                   ;
+; enable ; Input ; Info     ; Stuck at VCC                   ;
++--------+-------+----------+--------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "Register_Pipeline:EX_MEM_MEMREG" ;
++--------+-------+----------+---------------------------------+
+; Port   ; Type  ; Severity ; Details                         ;
++--------+-------+----------+---------------------------------+
+; flush  ; Input ; Info     ; Stuck at GND                    ;
+; enable ; Input ; Info     ; Stuck at VCC                    ;
++--------+-------+----------+---------------------------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "Register_Pipeline:EX_MEM_REGW" ;
++--------+-------+----------+-------------------------------+
+; Port   ; Type  ; Severity ; Details                       ;
++--------+-------+----------+-------------------------------+
+; flush  ; Input ; Info     ; Stuck at GND                  ;
+; enable ; Input ; Info     ; Stuck at VCC                  ;
++--------+-------+----------+-------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "Register_Pipeline:EX_MEM_BRANCH" ;
++--------+-------+----------+---------------------------------+
+; Port   ; Type  ; Severity ; Details                         ;
++--------+-------+----------+---------------------------------+
+; flush  ; Input ; Info     ; Stuck at GND                    ;
+; enable ; Input ; Info     ; Stuck at VCC                    ;
++--------+-------+----------+---------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "Register_Pipeline:EX_MEM_MEMRD" ;
++--------+-------+----------+--------------------------------+
+; Port   ; Type  ; Severity ; Details                        ;
++--------+-------+----------+--------------------------------+
+; flush  ; Input ; Info     ; Stuck at GND                   ;
+; enable ; Input ; Info     ; Stuck at VCC                   ;
++--------+-------+----------+--------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "Register_Pipeline:EX_MEM_MEMWR" ;
++--------+-------+----------+--------------------------------+
+; Port   ; Type  ; Severity ; Details                        ;
++--------+-------+----------+--------------------------------+
+; flush  ; Input ; Info     ; Stuck at GND                   ;
 ; enable ; Input ; Info     ; Stuck at VCC                   ;
 +--------+-------+----------+--------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Register_Pipeline:EX_MEM_MEMREG"                                                                                                                          ;
+; Port Connectivity Checks: "Register_Pipeline:EX_MEM_RD"                                                                                                                              ;
 +------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port       ; Type   ; Severity ; Details                                                                                                                                             ;
 +------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; flush      ; Input  ; Info     ; Stuck at GND                                                                                                                                        ;
 ; enable     ; Input  ; Info     ; Stuck at VCC                                                                                                                                        ;
-; DataInput  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "DataInput[31..1]" will be connected to GND. ;
-; DataOutput ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "DataOutput[31..1]" have no fanouts                     ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Register_Pipeline:EX_MEM_REGW"                                                                                                                            ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                                                                                             ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; enable     ; Input  ; Info     ; Stuck at VCC                                                                                                                                        ;
-; DataInput  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "DataInput[31..1]" will be connected to GND. ;
-; DataOutput ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "DataOutput[31..1]" have no fanouts                     ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Register_Pipeline:EX_MEM_JALR"                                                                                                                            ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                                                                                             ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; enable     ; Input  ; Info     ; Stuck at VCC                                                                                                                                        ;
-; DataInput  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "DataInput[31..1]" will be connected to GND. ;
-; DataOutput ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "DataOutput[31..1]" have no fanouts                     ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Register_Pipeline:EX_MEM_BRANCH"                                                                                                                          ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                                                                                             ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; enable     ; Input  ; Info     ; Stuck at VCC                                                                                                                                        ;
-; DataInput  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "DataInput[31..1]" will be connected to GND. ;
-; DataOutput ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "DataOutput[31..1]" have no fanouts                     ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Register_Pipeline:EX_MEM_MEMRD"                                                                                                                           ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                                                                                             ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; enable     ; Input  ; Info     ; Stuck at VCC                                                                                                                                        ;
-; DataInput  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "DataInput[31..1]" will be connected to GND. ;
-; DataOutput ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "DataOutput[31..1]" have no fanouts                     ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Register_Pipeline:EX_MEM_MEMWR"                                                                                                                           ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                                                                                             ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; enable     ; Input  ; Info     ; Stuck at VCC                                                                                                                                        ;
-; DataInput  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "DataInput[31..1]" will be connected to GND. ;
-; DataOutput ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "DataOutput[31..1]" have no fanouts                     ;
+; DataInput  ; Input  ; Warning  ; Input port expression (5 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "DataInput[31..5]" will be connected to GND. ;
+; DataOutput ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (5 bits) it drives; bit(s) "DataOutput[31..5]" have no fanouts                     ;
 +------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -1560,6 +1626,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+------------------------------+
 ; Port   ; Type  ; Severity ; Details                      ;
 +--------+-------+----------+------------------------------+
+; flush  ; Input ; Info     ; Stuck at GND                 ;
 ; enable ; Input ; Info     ; Stuck at VCC                 ;
 +--------+-------+----------+------------------------------+
 
@@ -1569,6 +1636,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+----------------------------------+
 ; Port   ; Type  ; Severity ; Details                          ;
 +--------+-------+----------+----------------------------------+
+; flush  ; Input ; Info     ; Stuck at GND                     ;
 ; enable ; Input ; Info     ; Stuck at VCC                     ;
 +--------+-------+----------+----------------------------------+
 
@@ -1578,97 +1646,82 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port      ; Type  ; Severity ; Details                                                                                                                                             ;
 +-----------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; flush     ; Input ; Info     ; Stuck at GND                                                                                                                                        ;
 ; enable    ; Input ; Info     ; Stuck at VCC                                                                                                                                        ;
 ; DataInput ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "DataInput[31..1]" will be connected to GND. ;
 +-----------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Register_Pipeline:ID_EX_MEWMREG"                                                                                                                          ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                                                                                             ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; enable     ; Input  ; Info     ; Stuck at VCC                                                                                                                                        ;
-; DataInput  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "DataInput[31..1]" will be connected to GND. ;
-; DataOutput ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "DataOutput[31..1]" have no fanouts                     ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "Register_Pipeline:ID_EX_MEWMREG" ;
++--------+-------+----------+---------------------------------+
+; Port   ; Type  ; Severity ; Details                         ;
++--------+-------+----------+---------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                    ;
++--------+-------+----------+---------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Register_Pipeline:ID_EX_REGW"                                                                                                                             ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                                                                                             ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; enable     ; Input  ; Info     ; Stuck at VCC                                                                                                                                        ;
-; DataInput  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "DataInput[31..1]" will be connected to GND. ;
-; DataOutput ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "DataOutput[31..1]" have no fanouts                     ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------+
+; Port Connectivity Checks: "Register_Pipeline:ID_EX_REGW" ;
++--------+-------+----------+------------------------------+
+; Port   ; Type  ; Severity ; Details                      ;
++--------+-------+----------+------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                 ;
++--------+-------+----------+------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Register_Pipeline:ID_EX_JALR"                                                                                                                             ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                                                                                             ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; enable     ; Input  ; Info     ; Stuck at VCC                                                                                                                                        ;
-; DataInput  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "DataInput[31..1]" will be connected to GND. ;
-; DataOutput ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "DataOutput[31..1]" have no fanouts                     ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------+
+; Port Connectivity Checks: "Register_Pipeline:ID_EX_JALR" ;
++--------+-------+----------+------------------------------+
+; Port   ; Type  ; Severity ; Details                      ;
++--------+-------+----------+------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                 ;
++--------+-------+----------+------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Register_Pipeline:ID_EX_BRANCH"                                                                                                                           ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                                                                                             ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; enable     ; Input  ; Info     ; Stuck at VCC                                                                                                                                        ;
-; DataInput  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "DataInput[31..1]" will be connected to GND. ;
-; DataOutput ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "DataOutput[31..1]" have no fanouts                     ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------+
+; Port Connectivity Checks: "Register_Pipeline:ID_EX_BRANCH" ;
++--------+-------+----------+--------------------------------+
+; Port   ; Type  ; Severity ; Details                        ;
++--------+-------+----------+--------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                   ;
++--------+-------+----------+--------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Register_Pipeline:ID_EX_MEMRD"                                                                                                                            ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                                                                                             ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; enable     ; Input  ; Info     ; Stuck at VCC                                                                                                                                        ;
-; DataInput  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "DataInput[31..1]" will be connected to GND. ;
-; DataOutput ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "DataOutput[31..1]" have no fanouts                     ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "Register_Pipeline:ID_EX_MEMRD" ;
++--------+-------+----------+-------------------------------+
+; Port   ; Type  ; Severity ; Details                       ;
++--------+-------+----------+-------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                  ;
++--------+-------+----------+-------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Register_Pipeline:ID_EX_MEMWR"                                                                                                                            ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                                                                                             ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; enable     ; Input  ; Info     ; Stuck at VCC                                                                                                                                        ;
-; DataInput  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "DataInput[31..1]" will be connected to GND. ;
-; DataOutput ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "DataOutput[31..1]" have no fanouts                     ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "Register_Pipeline:ID_EX_MEMWR" ;
++--------+-------+----------+-------------------------------+
+; Port   ; Type  ; Severity ; Details                       ;
++--------+-------+----------+-------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                  ;
++--------+-------+----------+-------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Register_Pipeline:ID_EX_ALUSRC"                                                                                                                           ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                                                                                             ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; enable     ; Input  ; Info     ; Stuck at VCC                                                                                                                                        ;
-; DataInput  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "DataInput[31..1]" will be connected to GND. ;
-; DataOutput ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "DataOutput[31..1]" have no fanouts                     ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------+
+; Port Connectivity Checks: "Register_Pipeline:ID_EX_ALUSRC" ;
++--------+-------+----------+--------------------------------+
+; Port   ; Type  ; Severity ; Details                        ;
++--------+-------+----------+--------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                   ;
++--------+-------+----------+--------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Register_Pipeline:ID_EX_ALUOP"                                                                                                                            ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                                                                                             ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; enable     ; Input  ; Info     ; Stuck at VCC                                                                                                                                        ;
-; DataInput  ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "DataInput[31..3]" will be connected to GND. ;
-; DataOutput ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (3 bits) it drives; bit(s) "DataOutput[31..3]" have no fanouts                     ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "Register_Pipeline:ID_EX_ALUOP" ;
++--------+-------+----------+-------------------------------+
+; Port   ; Type  ; Severity ; Details                       ;
++--------+-------+----------+-------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                  ;
++--------+-------+----------+-------------------------------+
 
 
 +---------------------------------------------------------+
@@ -1680,8 +1733,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+-----------------------------+
 
 
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Register_Pipeline:ID_EX_RD"                                                                                                                               ;
++------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                                             ;
++------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; enable     ; Input  ; Info     ; Stuck at VCC                                                                                                                                        ;
+; DataInput  ; Input  ; Warning  ; Input port expression (5 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "DataInput[31..5]" will be connected to GND. ;
+; DataOutput ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (5 bits) it drives; bit(s) "DataOutput[31..5]" have no fanouts                     ;
++------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +---------------------------------------------------------+
-; Port Connectivity Checks: "Register_Pipeline:ID_EX_RD2" ;
+; Port Connectivity Checks: "Register_Pipeline:ID_EX_RS2" ;
 +--------+-------+----------+-----------------------------+
 ; Port   ; Type  ; Severity ; Details                     ;
 +--------+-------+----------+-----------------------------+
@@ -1690,7 +1754,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------+
-; Port Connectivity Checks: "Register_Pipeline:ID_EX_RD1" ;
+; Port Connectivity Checks: "Register_Pipeline:ID_EX_RS1" ;
 +--------+-------+----------+-----------------------------+
 ; Port   ; Type  ; Severity ; Details                     ;
 +--------+-------+----------+-----------------------------+
@@ -1723,6 +1787,33 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+----------------------------+
 ; enable ; Input ; Info     ; Stuck at VCC               ;
 +--------+-------+----------+----------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Multiplexer_2_to_1:MUX_FWB_OR_B"                                                                                                                              ;
++--------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                                                                                                                                ;
++--------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Mux_Data_1_i ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "Mux_Data_1_i[31..1]" will be connected to GND. ;
++--------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Multiplexer_2_to_1:MUX_FWA_OR_A"                                                                                                                              ;
++--------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                                                                                                                                ;
++--------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Mux_Data_1_i ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "Mux_Data_1_i[31..1]" will be connected to GND. ;
++--------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Forwarding:FORWARDING_UNIT"                                                                                                             ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                          ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------+
+; ForwardData ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "ForwardData[31..1]" have no fanouts ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -1778,25 +1869,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 34                          ;
-; cycloneiii_ff         ; 9459                        ;
-;     CLR               ; 235                         ;
+; cycloneiii_ff         ; 9473                        ;
+;     CLR               ; 249                         ;
 ;     CLR SCLR          ; 32                          ;
 ;     CLR SCLR SLD      ; 8                           ;
 ;     ENA               ; 8192                        ;
 ;     ENA CLR           ; 992                         ;
-; cycloneiii_lcell_comb ; 7992                        ;
+; cycloneiii_lcell_comb ; 8105                        ;
 ;     arith             ; 61                          ;
 ;         2 data inputs ; 30                          ;
 ;         3 data inputs ; 31                          ;
-;     normal            ; 7931                        ;
+;     normal            ; 8044                        ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 120                         ;
-;         3 data inputs ; 553                         ;
-;         4 data inputs ; 7256                        ;
+;         2 data inputs ; 89                          ;
+;         3 data inputs ; 554                         ;
+;         4 data inputs ; 7399                        ;
 ; cycloneiii_ram_block  ; 32                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 12.00                       ;
-; Average LUT depth     ; 6.16                        ;
+; Max LUT depth         ; 17.00                       ;
+; Average LUT depth     ; 6.37                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1805,7 +1896,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:29     ;
+; Top            ; 00:00:31     ;
 +----------------+--------------+
 
 
@@ -1815,7 +1906,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Fri Jul  8 23:50:02 2022
+    Info: Processing started: Fri Jul 15 19:52:24 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RISC_V_Single_Cycle -c RISC_V_Single_Cycle
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -1855,30 +1946,38 @@ Info (12021): Found 1 design units, including 1 entities, in source file /riscv_
     Info (12023): Found entity 1: Register_Pipeline File: E:/RISCV_SC/RISC_V_SC-main/src/Register_Pipeline.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /riscv_sc/risc_v_sc-main/src/sp_register.v
     Info (12023): Found entity 1: SP_Register File: E:/RISCV_SC/RISC_V_SC-main/src/SP_Register.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at RISC_V_Single_Cycle.v(227): created implicit net for "Jmp_Out_w" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 227
+Info (12021): Found 1 design units, including 1 entities, in source file /riscv_sc/risc_v_sc-main/src/fwd.v
+    Info (12023): Found entity 1: Forwarding File: E:/RISCV_SC/RISC_V_SC-main/src/FWD.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /riscv_sc/risc_v_sc-main/src/hazardcontrol.v
+    Info (12023): Found entity 1: HazardControl File: E:/RISCV_SC/RISC_V_SC-main/src/HazardControl.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at RISC_V_Single_Cycle.v(244): created implicit net for "Jmp_Out_w" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 244
 Info (12127): Elaborating entity "RISC_V_Single_Cycle" for the top level hierarchy
-Info (12128): Elaborating entity "Control" for hierarchy "Control:CONTROL_UNIT" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 160
-Info (12128): Elaborating entity "PC_Register" for hierarchy "PC_Register:PC" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 170
-Info (12128): Elaborating entity "Program_Memory" for hierarchy "Program_Memory:PROGRAM_MEMORY" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 182
+Info (12128): Elaborating entity "Control" for hierarchy "Control:CONTROL_UNIT" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 177
+Info (12128): Elaborating entity "PC_Register" for hierarchy "PC_Register:PC" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 187
+Info (12128): Elaborating entity "Program_Memory" for hierarchy "Program_Memory:PROGRAM_MEMORY" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 199
 Warning (10850): Verilog HDL warning at Program_Memory.v(34): number of words (0) in memory file does not match the number of elements in the address range [0:63] File: E:/RISCV_SC/RISC_V_SC-main/src/Program_Memory.v Line: 34
 Warning (10030): Net "rom.data_a" at Program_Memory.v(30) has no driver or initial value, using a default initial value '0' File: E:/RISCV_SC/RISC_V_SC-main/src/Program_Memory.v Line: 30
 Warning (10030): Net "rom.waddr_a" at Program_Memory.v(30) has no driver or initial value, using a default initial value '0' File: E:/RISCV_SC/RISC_V_SC-main/src/Program_Memory.v Line: 30
 Warning (10030): Net "rom.we_a" at Program_Memory.v(30) has no driver or initial value, using a default initial value '0' File: E:/RISCV_SC/RISC_V_SC-main/src/Program_Memory.v Line: 30
-Info (12128): Elaborating entity "Adder_32_Bits" for hierarchy "Adder_32_Bits:PC_PLUS_4" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 192
-Info (12128): Elaborating entity "Multiplexer_2_to_1" for hierarchy "Multiplexer_2_to_1:MUX_JALR_OR_IMM" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 229
-Info (12128): Elaborating entity "Branch_Control" for hierarchy "Branch_Control:Branch_Control_Unit" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 264
-Info (12128): Elaborating entity "Data_Memory" for hierarchy "Data_Memory:Data_Memory_Unit" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 282
-Info (12128): Elaborating entity "Register_File" for hierarchy "Register_File:REGISTER_FILE_UNIT" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 317
+Info (12128): Elaborating entity "Adder_32_Bits" for hierarchy "Adder_32_Bits:PC_PLUS_4" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 209
+Info (12128): Elaborating entity "Multiplexer_2_to_1" for hierarchy "Multiplexer_2_to_1:MUX_JALR_OR_IMM" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 246
+Info (12128): Elaborating entity "Branch_Control" for hierarchy "Branch_Control:Branch_Control_Unit" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 281
+Info (12128): Elaborating entity "Data_Memory" for hierarchy "Data_Memory:Data_Memory_Unit" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 299
+Info (12128): Elaborating entity "Register_File" for hierarchy "Register_File:REGISTER_FILE_UNIT" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 336
 Info (12128): Elaborating entity "Decoder_Register_File" for hierarchy "Register_File:REGISTER_FILE_UNIT|Decoder_Register_File:DECODER_REG_FILE" File: E:/RISCV_SC/RISC_V_SC-main/src/Register_File.v Line: 43
 Info (12128): Elaborating entity "Register" for hierarchy "Register_File:REGISTER_FILE_UNIT|Register:Register_zero" File: E:/RISCV_SC/RISC_V_SC-main/src/Register_File.v Line: 59
 Info (12128): Elaborating entity "SP_Register" for hierarchy "Register_File:REGISTER_FILE_UNIT|SP_Register:Register_sp" File: E:/RISCV_SC/RISC_V_SC-main/src/Register_File.v Line: 85
 Info (12128): Elaborating entity "MUXRegisterFile" for hierarchy "Register_File:REGISTER_FILE_UNIT|MUXRegisterFile:MUXRegister1" File: E:/RISCV_SC/RISC_V_SC-main/src/Register_File.v Line: 481
-Info (12128): Elaborating entity "Immediate_Unit" for hierarchy "Immediate_Unit:IMM_UNIT" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 327
-Info (12128): Elaborating entity "ALU_Control" for hierarchy "ALU_Control:ALU_CONTROL_UNIT" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 355
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU_UNIT" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 368
+Info (12128): Elaborating entity "Immediate_Unit" for hierarchy "Immediate_Unit:IMM_UNIT" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 346
+Info (12128): Elaborating entity "ALU_Control" for hierarchy "ALU_Control:ALU_CONTROL_UNIT" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 374
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU_UNIT" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 387
 Warning (10764): Verilog HDL warning at ALU.v(53): converting signed shift amount to unsigned File: E:/RISCV_SC/RISC_V_SC-main/src/ALU.v Line: 53
 Warning (10764): Verilog HDL warning at ALU.v(54): converting signed shift amount to unsigned File: E:/RISCV_SC/RISC_V_SC-main/src/ALU.v Line: 54
-Info (12128): Elaborating entity "Register_Pipeline" for hierarchy "Register_Pipeline:IF_ID_PC" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 385
+Info (12128): Elaborating entity "Forwarding" for hierarchy "Forwarding:FORWARDING_UNIT" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 406
+Info (12128): Elaborating entity "HazardControl" for hierarchy "HazardControl:HAZARD_CONTROL_UNIT" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 423
+Info (12128): Elaborating entity "Register_Pipeline" for hierarchy "Register_Pipeline:IF_ID_PC" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 470
+Info (12128): Elaborating entity "Register_Pipeline" for hierarchy "Register_Pipeline:ID_EX_ALUOP" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 571
+Info (12128): Elaborating entity "Register_Pipeline" for hierarchy "Register_Pipeline:ID_EX_ALUSRC" File: E:/RISCV_SC/RISC_V_SC-main/src/RISC_V_Single_Cycle.v Line: 587
 Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "E:/RISCV_SC/RISC_V_SC-main/ProjectQuartus/db/RISC_V_Single_Cycle.ram0_Program_Memory_49bd8618.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Info (276014): Found 2 instances of uninferred RAM logic
     Info (276013): RAM logic "Register_File:REGISTER_FILE_UNIT|Decoder_Register_File:DECODER_REG_FILE|Ram0" is uninferred because MIF is not supported for the selected family File: E:/RISCV_SC/RISC_V_SC-main/src/Decoder_Register_File.v Line: 20
@@ -1909,22 +2008,22 @@ Info (12133): Instantiated megafunction "Program_Memory:PROGRAM_MEMORY|altsyncra
     Info (12134): Parameter "INIT_FILE" = "db/RISC_V_Single_Cycle.ram0_Program_Memory_49bd8618.hdl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_4781.tdf
     Info (12023): Found entity 1: altsyncram_4781 File: E:/RISCV_SC/RISC_V_SC-main/ProjectQuartus/db/altsyncram_4781.tdf Line: 28
-Warning (12241): 19 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 9 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13000): Registers with preset signals will power-up high File: E:/RISCV_SC/RISC_V_SC-main/src/SP_Register.v Line: 19
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 62 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 17355 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 17477 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 17289 logic cells
+    Info (21061): Implemented 17411 logic cells
     Info (21064): Implemented 32 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4930 megabytes
-    Info: Processing ended: Fri Jul  8 23:50:43 2022
-    Info: Elapsed time: 00:00:41
-    Info: Total CPU time (on all processors): 00:00:58
+    Info: Peak virtual memory: 4943 megabytes
+    Info: Processing ended: Fri Jul 15 19:53:07 2022
+    Info: Elapsed time: 00:00:43
+    Info: Total CPU time (on all processors): 00:00:59
 
 

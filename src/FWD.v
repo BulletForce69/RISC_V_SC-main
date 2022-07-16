@@ -16,20 +16,26 @@ module Forwarding
 	output ForwardA,
 	output ForwardB
 );
-Assign ForwardA = UpdateA;
-Assign ForwardB = UpdateB;
+assign ForwardA = UpdateA;
+assign ForwardB = UpdateB;
 
-always@(ForwardMEM or  ReadDataWB or ForwardWB) 
+always@(ForwardMEM or  ReadDataWB or ForwardWB or ALUResMEM or MEMtoREG or ALUResWB) 
 begin
-	if(ForwardMEM == 1'b1 && MEMtoREG == 1'b1){
-		ForwardData = ReadDataMEM;
-	}
-	if(ForwardMEM == 1'b1 && MEMtoREG == 1'b0){
+	if(ForwardMEM == 1'b1 && MEMtoREG == 1'b1)
+		ForwardData = ReadDataWB;
+	else
+		ForwardData = 0;
+	
+	if(ForwardMEM == 1'b1 && MEMtoREG == 1'b0)
 		ForwardData = ALUResMEM;
-	}
-	if(ForwardWB == 1'b1){
+	else
+		ForwardData = 0;
+	
+	if(ForwardWB == 1'b1)
 		ForwardData = ALUResWB;
-	}
+	else
+		ForwardData = 0;
+	
 end
 
 endmodule
